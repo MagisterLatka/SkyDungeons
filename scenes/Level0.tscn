@@ -1,25 +1,28 @@
-[gd_scene load_steps=21 format=3 uid="uid://c7dr2ksxavrkv"]
+[gd_scene load_steps=24 format=3 uid="uid://c7dr2ksxavrkv"]
 
-[ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://avfe8431941181a9afdae.png" id="2_0gnku"]
-[ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://brickwall.png" id="2_b6gcw"]
-[ext_resource type="Texture2D" uid="uid://brks7ftxux7ob" path="res://67dc45f6c2e74657d2e259b383d5a0b4.jpg" id="3_xtysj"]
-[ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://key.png" id="4_tmywe"]
-[ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://stairsup.png" id="5_3am8s"]
-[ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://lock.png" id="6_4vlk8"]
-[ext_resource type="PackedScene" uid="uid://ci1divia7hums" path="res://enemy.tscn" id="8_2lgm5"]
+[ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://assets/levels/avfe8431941181a9afdae.png" id="1_6tlw5"]
+[ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="2_r7v4i"]
+[ext_resource type="Texture2D" uid="uid://brks7ftxux7ob" path="res://assets/levels/67dc45f6c2e74657d2e259b383d5a0b4.jpg" id="3_7o15u"]
+[ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="4_26y0g"]
+[ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="5_hyv1a"]
+[ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="6_oce55"]
+[ext_resource type="PackedScene" uid="uid://ci1divia7hums" path="res://scenes/enemy.tscn" id="8_2lgm5"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="9_cmbel"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bqvob"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8q5eh"]
-
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_47j8t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47e13"]
 size = Vector2(179.8, 100)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4xe5"]
+size = Vector2(102.4, 102.4)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_be71c"]
+size = Vector2(102.4, 204.8)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lcudy"]
 size = Vector2(204.8, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fljg"]
+size = Vector2(358.4, 405.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qax8y"]
 size = Vector2(156.4, 249.6)
@@ -27,14 +30,23 @@ size = Vector2(156.4, 249.6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dw4qd"]
 size = Vector2(9.80002, 205.4)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fljg"]
-size = Vector2(358.4, 405.4)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_41qwu"]
+size = Vector2(409.6, 51.2)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4xe5"]
-size = Vector2(102.4, 102.4)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dj02h"]
+size = Vector2(51.2, 409.6)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_be71c"]
-size = Vector2(102.4, 204.8)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eq3qw"]
+size = Vector2(50, 51.2)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4evck"]
+size = Vector2(51.2, 204.8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6scq2"]
+size = Vector2(51.2, 409.6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_celxs"]
+size = Vector2(204.8, 51.2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a5a8n"]
 size = Vector2(560, 400)
@@ -49,7 +61,7 @@ metadata/_edit_vertical_guides_ = []
 texture_filter = 1
 texture_repeat = 2
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 8192, 8192)
@@ -59,7 +71,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(509.6, 0)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 8192)
@@ -69,7 +81,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(559.6, 358.4)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 4000, 1024)
@@ -79,7 +91,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(179.8, 409.6)
 scale = Vector2(0.049, 0.049)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 2048)
@@ -89,7 +101,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(409.6, 179.8)
 scale = Vector2(0.049, 0.049)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2048, 1024)
@@ -99,7 +111,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(0, 509.6)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
@@ -108,7 +120,7 @@ region_rect = Rect2(0, 0, 4096, 4096)
 texture_filter = 1
 texture_repeat = 2
 position = Vector2(4096, 0)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
@@ -117,7 +129,7 @@ region_rect = Rect2(0, 0, 4096, 4096)
 texture_filter = 1
 texture_repeat = 2
 position = Vector2(0, 4096)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
@@ -126,7 +138,7 @@ region_rect = Rect2(0, 0, 4096, 4096)
 texture_filter = 1
 texture_repeat = 2
 position = Vector2(4096, 4096)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2048, 2048)
@@ -136,7 +148,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(759.6, 358.4)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_0gnku")
+texture = ExtResource("1_6tlw5")
 centered = false
 flip_h = true
 flip_v = true
@@ -144,33 +156,6 @@ region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
 
 [node name="Walls" type="StaticBody2D" parent="."]
-
-[node name="BoundaryTop" type="CollisionShape2D" parent="Walls"]
-position = Vector2(500, 0)
-rotation = 3.14159
-scale = Vector2(5, 1)
-shape = SubResource("WorldBoundaryShape2D_bqvob")
-one_way_collision = true
-
-[node name="BoundaryBottom" type="CollisionShape2D" parent="Walls"]
-position = Vector2(500, 919.2)
-scale = Vector2(5, 1)
-shape = SubResource("WorldBoundaryShape2D_bqvob")
-one_way_collision = true
-
-[node name="BoundaryLeft" type="CollisionShape2D" parent="Walls"]
-position = Vector2(0, 500)
-rotation = 1.5708
-scale = Vector2(5, 1)
-shape = SubResource("WorldBoundaryShape2D_8q5eh")
-one_way_collision = true
-
-[node name="BoundaryRight" type="CollisionShape2D" parent="Walls"]
-position = Vector2(964.6, 500)
-rotation = -1.5708
-scale = Vector2(5, 1)
-shape = SubResource("WorldBoundaryShape2D_47j8t")
-one_way_collision = true
 
 [node name="Wall0" type="CollisionShape2D" parent="Walls"]
 position = Vector2(89.9, 459.6)
@@ -181,7 +166,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-141.1, -50)
 scale = Vector2(0.0497788, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 4640, 2000)
@@ -195,106 +180,10 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-89.9, -50)
 scale = Vector2(0.0497788, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 3612, 2000)
-
-[node name="Wall6" type="CollisionShape2D" parent="Walls"]
-position = Vector2(459.6, 612)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_lcudy")
-
-[node name="Brickwall" type="Sprite2D" parent="Walls/Wall6"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(-151.4, 50.0005)
-rotation = -1.5708
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 2000, 9172)
-
-[node name="Wall4" type="CollisionShape2D" parent="Walls"]
-position = Vector2(459.6, 319.7)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_47e13")
-
-[node name="Brickwall" type="Sprite2D" parent="Walls/Wall4"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(-89.8998, 50.0003)
-rotation = -1.5708
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 2000, 4616)
-
-[node name="Wall8" type="CollisionShape2D" parent="Walls"]
-position = Vector2(634.8, 487.8)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_qax8y")
-
-[node name="Brickwall9" type="Sprite2D" parent="Walls/Wall8"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(-78.1995, 125.2)
-rotation = -1.5708
-scale = Vector2(0.0497788, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 5022, 3072)
-
-[node name="Wall9" type="CollisionShape2D" parent="Walls"]
-position = Vector2(861.7, 568.1)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_dw4qd")
-
-[node name="Wall5" type="CollisionShape2D" parent="Walls"]
-position = Vector2(459.6, 89.9)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_47e13")
-
-[node name="Brickwall" type="Sprite2D" parent="Walls/Wall5"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(-140.9, 50.0005)
-rotation = -1.5708
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 2000, 4616)
-
-[node name="Wall7" type="CollisionShape2D" parent="Walls"]
-position = Vector2(762.3, 179.2)
-rotation = 1.5708
-shape = SubResource("RectangleShape2D_7fljg")
-
-[node name="Brickwall" type="Sprite2D" parent="Walls/Wall7"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(-179.199, 202.701)
-rotation = -1.5708
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 1024, 7168)
-
-[node name="Brickwall1" type="Sprite2D" parent="Walls/Wall7"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(128.001, 151.5)
-rotation = -1.5708
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 7046, 1024)
 
 [node name="Wall2" type="CollisionShape2D" parent="Walls"]
 position = Vector2(256, 868)
@@ -305,7 +194,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-51.2, -51.2)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2048, 2048)
@@ -319,97 +208,218 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-51.2, -102.4)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2048, 4096)
 
-[node name="Brickwall" type="Sprite2D" parent="Walls"]
-position = Vector2(-51.2, -51.2)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
+[node name="Wall4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(459.6, 319.7)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_47e13")
 
-[node name="Brickwall2" type="Sprite2D" parent="Walls"]
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall4"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(0, -51.2)
+position = Vector2(-89.8998, 50.0003)
+rotation = -1.5708
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
 centered = false
 region_enabled = true
-region_rect = Rect2(0, 0, 8192, 1024)
+region_rect = Rect2(0, 0, 2000, 4616)
 
-[node name="Brickwall10" type="Sprite2D" parent="Walls"]
+[node name="Wall5" type="CollisionShape2D" parent="Walls"]
+position = Vector2(459.6, 89.9)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_47e13")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall5"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(655.9, 563.2)
+position = Vector2(-140.9, 50.0005)
+rotation = -1.5708
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 4616)
+
+[node name="Wall6" type="CollisionShape2D" parent="Walls"]
+position = Vector2(459.6, 612)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_lcudy")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall6"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-151.4, 50.0005)
+rotation = -1.5708
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_r7v4i")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 2000, 9172)
+
+[node name="Wall7" type="CollisionShape2D" parent="Walls"]
+position = Vector2(762.3, 179.2)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7fljg")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall7"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-179.199, 202.701)
+rotation = -1.5708
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_r7v4i")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 7168)
+
+[node name="Brickwall1" type="Sprite2D" parent="Walls/Wall7"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(128.001, 151.5)
+rotation = -1.5708
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_r7v4i")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 7046, 1024)
+
+[node name="Wall8" type="CollisionShape2D" parent="Walls"]
+position = Vector2(634.8, 487.8)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_qax8y")
+
+[node name="Brickwall9" type="Sprite2D" parent="Walls/Wall8"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-78.1995, 125.2)
+rotation = -1.5708
+scale = Vector2(0.0497788, 0.05)
+texture = ExtResource("2_r7v4i")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 5022, 3072)
+
+[node name="Wall9" type="CollisionShape2D" parent="Walls"]
+position = Vector2(861.7, 568.1)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_dw4qd")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall9"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-4.89923, 205.8)
+rotation = -1.5708
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_r7v4i")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 6144, 1024)
 
-[node name="Brickwall3" type="Sprite2D" parent="Walls"]
+[node name="Wall10" type="CollisionShape2D" parent="Walls"]
+position = Vector2(204.8, -25.6)
+shape = SubResource("RectangleShape2D_41qwu")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall10"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(-51.2, 0)
+position = Vector2(-204.8, -25.6)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8192, 1024)
+
+[node name="Wall11" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-25.6, 204.8)
+shape = SubResource("RectangleShape2D_dj02h")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall11"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-25.6, -204.8)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_r7v4i")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 8192)
 
-[node name="Brickwall9" type="Sprite2D" parent="Walls"]
+[node name="Wall12" type="CollisionShape2D" parent="Walls"]
+position = Vector2(534.6, -25.6)
+shape = SubResource("RectangleShape2D_eq3qw")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall12"]
+position = Vector2(-25, -25.6)
+scale = Vector2(0.049, 0.05)
+texture = ExtResource("2_r7v4i")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1024, 1024)
+
+[node name="Wall13" type="CollisionShape2D" parent="Walls"]
+position = Vector2(988.7, 460.8)
+shape = SubResource("RectangleShape2D_4evck")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall13"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(963.1, 307.2)
+position = Vector2(-25.6, -153.6)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
 centered = false
 flip_h = true
 flip_v = true
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 6144)
 
-[node name="Brickwall4" type="Sprite2D" parent="Walls"]
-position = Vector2(509.6, -51.2)
-scale = Vector2(0.049, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 1024, 1024)
+[node name="Wall14" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-25.6, 714.3)
+shape = SubResource("RectangleShape2D_6scq2")
 
-[node name="Brickwall5" type="Sprite2D" parent="Walls"]
-position = Vector2(559.6, -51.2)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-
-[node name="Brickwall6" type="Sprite2D" parent="Walls"]
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall14"]
 texture_filter = 1
 texture_repeat = 2
-position = Vector2(0, 919.2)
+position = Vector2(-25.6, -204.7)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 8192, 1024)
-
-[node name="Brickwall7" type="Sprite2D" parent="Walls"]
-texture_filter = 1
-texture_repeat = 2
-position = Vector2(-51.2, 509.6)
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 8192)
 
-[node name="Brickwall8" type="Sprite2D" parent="Walls"]
+[node name="Wall15" type="CollisionShape2D" parent="Walls"]
+position = Vector2(102.4, 944.8)
+shape = SubResource("RectangleShape2D_celxs")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall15"]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(-102.4, -25.6)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_r7v4i")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8192, 1024)
+
+[node name="Brickwall" type="Sprite2D" parent="Walls"]
+position = Vector2(-51.2, -51.2)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_r7v4i")
+centered = false
+
+[node name="Brickwall1" type="Sprite2D" parent="Walls"]
 position = Vector2(-51.2, 919.2)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_b6gcw")
+texture = ExtResource("2_r7v4i")
+centered = false
+
+[node name="Brickwall2" type="Sprite2D" parent="Walls"]
+position = Vector2(559.6, -51.2)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_r7v4i")
 centered = false
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -419,14 +429,14 @@ texture_repeat = 3
 position = Vector2(500, 500)
 rotation = -1.5708
 scale = Vector2(2.5, 1)
-texture = ExtResource("3_xtysj")
+texture = ExtResource("3_7o15u")
 region_enabled = true
 region_rect = Rect2(0, 0, 564, 2202)
 
 [node name="Key" type="Sprite2D" parent="."]
 position = Vector2(181, 901)
 scale = Vector2(0.04, 0.04)
-texture = ExtResource("4_tmywe")
+texture = ExtResource("4_26y0g")
 region_rect = Rect2(0, 0, 102, 74)
 
 [node name="Area2D" type="Area2D" parent="Key"]
@@ -437,13 +447,13 @@ shape = SubResource("RectangleShape2D_a5a8n")
 [node name="Stairsup" type="Sprite2D" parent="."]
 position = Vector2(939, 542)
 scale = Vector2(0.1, 0.2)
-texture = ExtResource("5_3am8s")
+texture = ExtResource("5_hyv1a")
 region_enabled = true
 region_rect = Rect2(0, 30, 282, 129)
 
 [node name="Lock" type="Sprite2D" parent="Stairsup"]
 scale = Vector2(1, 0.5)
-texture = ExtResource("6_4vlk8")
+texture = ExtResource("6_oce55")
 
 [node name="Area2D" type="Area2D" parent="Stairsup"]
 

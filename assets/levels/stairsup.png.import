@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cangckw36ftqr"
-path="res://.godot/imported/stairsdown.png-b9911fe82808901b6659315880775662.ctex"
+uid="uid://b3agm3tfhawr4"
+path="res://.godot/imported/stairsup.png-393cdb37dfa00698637dd287fe47556c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stairsdown.png"
-dest_files=["res://.godot/imported/stairsdown.png-b9911fe82808901b6659315880775662.ctex"]
+source_file="res://assets/levels/stairsup.png"
+dest_files=["res://.godot/imported/stairsup.png-393cdb37dfa00698637dd287fe47556c.ctex"]
 
 [params]
 

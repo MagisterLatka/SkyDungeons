@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3agm3tfhawr4"
-path="res://.godot/imported/stairsup.png-c48ff77982e95d1a68749c89568290ed.ctex"
+uid="uid://dtucmpp8xrsxw"
+path="res://.godot/imported/lock.png-66f4f6eb27ce5214c1fae21175b83d89.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://stairsup.png"
-dest_files=["res://.godot/imported/stairsup.png-c48ff77982e95d1a68749c89568290ed.ctex"]
+source_file="res://assets/levels/lock.png"
+dest_files=["res://.godot/imported/lock.png-66f4f6eb27ce5214c1fae21175b83d89.ctex"]
 
 [params]
 

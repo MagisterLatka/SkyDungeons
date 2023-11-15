@@ -155,7 +155,7 @@ flip_v = true
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
 
-[node name="Walls" type="StaticBody2D" parent="."]
+[node name="Walls" type="StaticBody2D" parent="." groups=["Wall"]]
 
 [node name="Wall0" type="CollisionShape2D" parent="Walls"]
 position = Vector2(89.9, 459.6)

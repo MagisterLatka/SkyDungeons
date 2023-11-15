@@ -1,13 +1,14 @@
-[gd_scene load_steps=24 format=3 uid="uid://c7dr2ksxavrkv"]
+[gd_scene load_steps=24 format=3 uid="uid://m58ofjv8cmch"]
 
 [ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://assets/levels/avfe8431941181a9afdae.png" id="1_6tlw5"]
+[ext_resource type="Script" path="res://Label.gd" id="1_kdqu4"]
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="2_r7v4i"]
 [ext_resource type="Texture2D" uid="uid://brks7ftxux7ob" path="res://assets/levels/67dc45f6c2e74657d2e259b383d5a0b4.jpg" id="3_7o15u"]
-[ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="4_26y0g"]
 [ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="5_hyv1a"]
 [ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="6_oce55"]
-[ext_resource type="PackedScene" uid="uid://ci1divia7hums" path="res://scenes/enemy.tscn" id="8_2lgm5"]
+[ext_resource type="PackedScene" uid="uid://w0exod3bjubo" path="res://scenes/enemy.tscn" id="8_2lgm5"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="9_cmbel"]
+[ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="9_txsj8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47e13"]
 size = Vector2(179.8, 100)
@@ -47,9 +48,6 @@ size = Vector2(51.2, 409.6)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_celxs"]
 size = Vector2(204.8, 51.2)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a5a8n"]
-size = Vector2(560, 400)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_prwo3"]
 size = Vector2(299.999, 140)
@@ -433,17 +431,6 @@ texture = ExtResource("3_7o15u")
 region_enabled = true
 region_rect = Rect2(0, 0, 564, 2202)
 
-[node name="Key" type="Sprite2D" parent="."]
-position = Vector2(181, 901)
-scale = Vector2(0.04, 0.04)
-texture = ExtResource("4_26y0g")
-region_rect = Rect2(0, 0, 102, 74)
-
-[node name="Area2D" type="Area2D" parent="Key"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Key/Area2D"]
-shape = SubResource("RectangleShape2D_a5a8n")
-
 [node name="Stairsup" type="Sprite2D" parent="."]
 position = Vector2(939, 542)
 scale = Vector2(0.1, 0.2)
@@ -467,3 +454,13 @@ scale = Vector2(0.2, 0.2)
 
 [node name="Player1" parent="." instance=ExtResource("9_cmbel")]
 position = Vector2(200, 102)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_kdqu4")
+
+[node name="Key" parent="." instance=ExtResource("9_txsj8")]
+position = Vector2(368, 367)

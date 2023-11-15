@@ -81,6 +81,7 @@ func Attack():
 	Sprite.play("attack")
 	if Sprite.frame == 6:
 		isAttack = false
+		take_damage(1)
 	#await  Sprite.animation_finished
 	
 

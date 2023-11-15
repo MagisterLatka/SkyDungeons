@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://c7dr2ksxavrkv"]
+[gd_scene load_steps=24 format=3 uid="uid://m58ofjv8cmch"]
 
 [ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://assets/levels/avfe8431941181a9afdae.png" id="1_6tlw5"]
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="2_r7v4i"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="4_26y0g"]
 [ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="5_hyv1a"]
 [ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="6_oce55"]
-[ext_resource type="PackedScene" uid="uid://ci1divia7hums" path="res://scenes/enemy.tscn" id="8_2lgm5"]
+[ext_resource type="PackedScene" uid="uid://w0exod3bjubo" path="res://scenes/enemy.tscn" id="8_2lgm5"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="9_cmbel"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47e13"]

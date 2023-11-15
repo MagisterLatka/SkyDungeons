@@ -1,6 +1,7 @@
-[gd_scene load_steps=24 format=3 uid="uid://m58ofjv8cmch"]
+[gd_scene load_steps=25 format=3 uid="uid://m58ofjv8cmch"]
 
 [ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://assets/levels/avfe8431941181a9afdae.png" id="1_6tlw5"]
+[ext_resource type="Script" path="res://Label.gd" id="1_kdqu4"]
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="2_r7v4i"]
 [ext_resource type="Texture2D" uid="uid://brks7ftxux7ob" path="res://assets/levels/67dc45f6c2e74657d2e259b383d5a0b4.jpg" id="3_7o15u"]
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="4_26y0g"]
@@ -467,3 +468,10 @@ scale = Vector2(0.2, 0.2)
 
 [node name="Player1" parent="." instance=ExtResource("9_cmbel")]
 position = Vector2(200, 102)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+script = ExtResource("1_kdqu4")

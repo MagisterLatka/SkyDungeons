@@ -1,6 +1,5 @@
 [gd_scene load_steps=21 format=3 uid="uid://c7dr2ksxavrkv"]
 
-[ext_resource type="PackedScene" uid="uid://chfl4u4efkj6b" path="res://Player.tscn" id="1_1e5rk"]
 [ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://avfe8431941181a9afdae.png" id="2_0gnku"]
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://brickwall.png" id="2_b6gcw"]
 [ext_resource type="Texture2D" uid="uid://brks7ftxux7ob" path="res://67dc45f6c2e74657d2e259b383d5a0b4.jpg" id="3_xtysj"]
@@ -8,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://stairsup.png" id="5_3am8s"]
 [ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://lock.png" id="6_4vlk8"]
 [ext_resource type="PackedScene" uid="uid://ci1divia7hums" path="res://enemy.tscn" id="8_2lgm5"]
+[ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="9_cmbel"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bqvob"]
 
@@ -44,10 +44,6 @@ size = Vector2(299.999, 140)
 
 [node name="Level0" type="Node2D"]
 metadata/_edit_vertical_guides_ = []
-
-[node name="Player" parent="." instance=ExtResource("1_1e5rk")]
-z_index = 1
-position = Vector2(199, 162)
 
 [node name="Room0" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -458,3 +454,6 @@ shape = SubResource("RectangleShape2D_prwo3")
 [node name="Enemy" parent="." instance=ExtResource("8_2lgm5")]
 position = Vector2(113, 119)
 scale = Vector2(0.2, 0.2)
+
+[node name="Player1" parent="." instance=ExtResource("9_cmbel")]
+position = Vector2(200, 102)

@@ -461,6 +461,7 @@ offset_bottom = 43.0
 theme_override_font_sizes/font_size = 32
 text = "HP"
 script = ExtResource("1_kdqu4")
+metadata/_edit_use_anchors_ = true
 
 [node name="Keys" type="Label" parent="CanvasLayer"]
 offset_left = 110.0
@@ -468,6 +469,7 @@ offset_top = 565.0
 offset_right = 150.0
 offset_bottom = 588.0
 script = SubResource("GDScript_xndq3")
+metadata/_edit_use_anchors_ = true
 
 [node name="Key" type="TextureRect" parent="CanvasLayer"]
 offset_left = 43.0
@@ -476,6 +478,7 @@ offset_right = 98.5676
 offset_bottom = 600.0
 texture = ExtResource("9_0spnx")
 expand_mode = 3
+metadata/_edit_use_anchors_ = true
 
 [node name="Key" parent="." instance=ExtResource("9_txsj8")]
 position = Vector2(368, 367)

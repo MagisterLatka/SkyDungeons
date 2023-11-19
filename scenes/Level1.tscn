@@ -79,9 +79,6 @@ size = Vector2(500, 100)
 
 [node name="Level1" type="Node2D"]
 
-[node name="Player" parent="." instance=ExtResource("2_cav4v")]
-position = Vector2(254, 211)
-
 [node name="Rooms" type="Node" parent="."]
 
 [node name="Room0" type="Sprite2D" parent="Rooms"]
@@ -249,7 +246,7 @@ centered = false
 region_enabled = true
 region_rect = Rect2(100, 150, 200, 100)
 
-[node name="Walls" type="Area2D" parent="."]
+[node name="Walls" type="StaticBody2D" parent="."]
 
 [node name="Wall0" type="CollisionShape2D" parent="Walls"]
 position = Vector2(550, -50)
@@ -522,3 +519,7 @@ region_rect = Rect2(15, 20, 262, 154)
 
 [node name="Key" parent="." instance=ExtResource("7_bf71h")]
 position = Vector2(1744, 152)
+
+[node name="Player1" parent="." instance=ExtResource("2_cav4v")]
+z_index = 1
+position = Vector2(200, 102)

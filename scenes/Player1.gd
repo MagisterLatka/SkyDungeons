@@ -65,7 +65,6 @@ func _physics_process(delta):
 				Sprite.play("default")
 			
 		position += velocity * delta
-		#position = position.clamp(Vector2.ZERO, screen_size)
 
 			
 	elif isAttack:

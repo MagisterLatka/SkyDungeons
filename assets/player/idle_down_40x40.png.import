@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0e4xlndjqmfv"
-path="res://.godot/imported/noBKG_KnightIdle_strip.png-050b1e5d7dd407a046c4eddc4d0527a2.ctex"
+uid="uid://c4u1k5j1icg6u"
+path="res://.godot/imported/idle_down_40x40.png-8ebde5e6ca3c528e9551dfc924194ef6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/noBKG_KnightIdle_strip.png"
-dest_files=["res://.godot/imported/noBKG_KnightIdle_strip.png-050b1e5d7dd407a046c4eddc4d0527a2.ctex"]
+source_file="res://assets/player/idle_down_40x40.png"
+dest_files=["res://.godot/imported/idle_down_40x40.png-8ebde5e6ca3c528e9551dfc924194ef6.ctex"]
 
 [params]
 

@@ -253,7 +253,6 @@ region_rect = Rect2(100, 150, 200, 100)
 
 [node name="Wall0" type="CollisionShape2D" parent="Walls"]
 position = Vector2(550, -50)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_m34sm")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall0"]
@@ -298,7 +297,6 @@ region_rect = Rect2(0, 0, 4000, 4000)
 
 [node name="Wall4" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-550, 600)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_oss6d")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall4"]
@@ -310,7 +308,6 @@ region_rect = Rect2(0, 0, 3000, 2000)
 
 [node name="Wall5" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-200.5, 351)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_tqbhh")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall5"]
@@ -388,7 +385,6 @@ region_rect = Rect2(0, 0, 7000, 10000)
 
 [node name="Wall12" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-1050, 750)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_wxqfe")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall12"]
@@ -411,7 +407,6 @@ region_rect = Rect2(0, 0, 1000, 6000)
 
 [node name="Wall14" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-1050, 1400)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_dqotx")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall14"]
@@ -423,7 +418,6 @@ region_rect = Rect2(0, 0, 5000, 2000)
 
 [node name="Wall15" type="CollisionShape2D" parent="Walls"]
 position = Vector2(1500, 50)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_3mo24")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall15"]

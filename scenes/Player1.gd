@@ -10,7 +10,7 @@ signal hit
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var Sprite = $AnimatedSprite2D
-var lastDirection = 1 #1 - w prawo, 0 - w lewo
+var lastDirection = 1 #1 - w prawo, 2 - w dol, 3 - w lewo, 4 - w gore
 var screen_size
 var isAttack = false
 var isDead = false
@@ -42,19 +42,27 @@ func _physics_process(delta):
 			#Sprite.animation = "run"
 			if directionY != 0:
 				if directionY > 0:
-					Sprite.play("run_down")
+					Sprite.play("run_down")	
+					lastDirection = 2				
 				else:
 					Sprite.play("run_up")
+					lastDirection = 4
 			else:
 				Sprite.play("run")
 				if directionX < 0:
-					Sprite.flip_h = true					
+					Sprite.flip_h = true	
+					lastDirection = 3				
 				else:
 					Sprite.flip_h = false
+					lastDirection = 1
 
 		else:
-			#Sprite.stop()
-			Sprite.play("default")
+			if lastDirection == 2:
+				Sprite.play("idle_down")
+			elif lastDirection == 4:
+				Sprite.play("idle_up")
+			else:
+				Sprite.play("default")
 			
 		position += velocity * delta
 		#position = position.clamp(Vector2.ZERO, screen_size)
@@ -78,7 +86,13 @@ func get_health():
 	return health
 		
 func Attack():
-	Sprite.play("attack")
+	if lastDirection == 2:
+		Sprite.play("attack_down")
+	elif lastDirection == 4:
+		Sprite.play("attack_up"	)
+	else:
+		Sprite.play("attack_left_right")
+		
 	if Sprite.frame == 6:
 		isAttack = false
 		take_damage(1)
@@ -92,3 +106,5 @@ func _on_enemies_detection_body_entered(body):
 func death_player():
 	isDead = true
 	#Sprite.play("death")
+
+

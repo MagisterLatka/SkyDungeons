@@ -15,6 +15,10 @@ run/main_scene="res://scenes/Level0.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*res://scenes/Game.gd"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"

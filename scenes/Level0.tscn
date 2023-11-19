@@ -4,11 +4,11 @@
 [ext_resource type="Script" path="res://Label.gd" id="1_kdqu4"]
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="2_r7v4i"]
 [ext_resource type="Texture2D" uid="uid://brks7ftxux7ob" path="res://assets/levels/67dc45f6c2e74657d2e259b383d5a0b4.jpg" id="3_7o15u"]
-[ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="5_hyv1a"]
-[ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="6_oce55"]
-[ext_resource type="PackedScene" uid="uid://w0exod3bjubo" path="res://scenes/enemy.tscn" id="8_2lgm5"]
+[ext_resource type="PackedScene" uid="uid://w0exod3bjubo" path="res://enemy.tscn" id="8_2lgm5"]
+[ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_0spnx"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="9_cmbel"]
 [ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="9_txsj8"]
+[ext_resource type="PackedScene" uid="uid://b5ixaquo5kv3e" path="res://scenes/stairsup.tscn" id="11_unorh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47e13"]
 size = Vector2(179.8, 100)
@@ -49,8 +49,20 @@ size = Vector2(51.2, 409.6)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_celxs"]
 size = Vector2(204.8, 51.2)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_prwo3"]
-size = Vector2(299.999, 140)
+[sub_resource type="GDScript" id="GDScript_xndq3"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = str(Game.get_keys())
+	
+"
 
 [node name="Level0" type="Node2D"]
 metadata/_edit_vertical_guides_ = []
@@ -431,36 +443,42 @@ texture = ExtResource("3_7o15u")
 region_enabled = true
 region_rect = Rect2(0, 0, 564, 2202)
 
-[node name="Stairsup" type="Sprite2D" parent="."]
-position = Vector2(939, 542)
-scale = Vector2(0.1, 0.2)
-texture = ExtResource("5_hyv1a")
-region_enabled = true
-region_rect = Rect2(0, 30, 282, 129)
-
-[node name="Lock" type="Sprite2D" parent="Stairsup"]
-scale = Vector2(1, 0.5)
-texture = ExtResource("6_oce55")
-
-[node name="Area2D" type="Area2D" parent="Stairsup"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Stairsup/Area2D"]
-position = Vector2(-0.00195313, -0.000244141)
-shape = SubResource("RectangleShape2D_prwo3")
-
 [node name="Enemy" parent="." instance=ExtResource("8_2lgm5")]
 position = Vector2(113, 119)
 scale = Vector2(0.2, 0.2)
 
 [node name="Player1" parent="." instance=ExtResource("9_cmbel")]
+z_index = 1
 position = Vector2(200, 102)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="Hp" type="Label" parent="CanvasLayer"]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 62.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 32
+text = "HP"
 script = ExtResource("1_kdqu4")
+
+[node name="Keys" type="Label" parent="CanvasLayer"]
+offset_left = 110.0
+offset_top = 565.0
+offset_right = 150.0
+offset_bottom = 588.0
+script = SubResource("GDScript_xndq3")
+
+[node name="Key" type="TextureRect" parent="CanvasLayer"]
+offset_left = 43.0
+offset_top = 560.0
+offset_right = 98.5676
+offset_bottom = 600.0
+texture = ExtResource("9_0spnx")
+expand_mode = 3
 
 [node name="Key" parent="." instance=ExtResource("9_txsj8")]
 position = Vector2(368, 367)
+
+[node name="Stairsup2" parent="." instance=ExtResource("11_unorh")]
+position = Vector2(933, 539)

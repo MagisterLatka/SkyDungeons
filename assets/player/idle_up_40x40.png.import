@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsqeii30emjjr"
-path="res://.godot/imported/noBKG_KnightAttack_strip.png-f27880e1b1bc56cc06d5d802877f3a61.ctex"
+uid="uid://ccsng42gv3453"
+path="res://.godot/imported/idle_up_40x40.png-fd292dc0246ce5cede7468810c5ae5b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/player/noBKG_KnightAttack_strip.png"
-dest_files=["res://.godot/imported/noBKG_KnightAttack_strip.png-f27880e1b1bc56cc06d5d802877f3a61.ctex"]
+source_file="res://assets/player/idle_up_40x40.png"
+dest_files=["res://.godot/imported/idle_up_40x40.png-fd292dc0246ce5cede7468810c5ae5b2.ctex"]
 
 [params]
 

@@ -8,5 +8,5 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	text = "Hp " + str(get_node("../../Player1").get_health())
+	text = "Hp " + str(Game.get_health())
 	

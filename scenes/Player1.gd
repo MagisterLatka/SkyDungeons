@@ -3,8 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -400.0
-const MAXHEALTH = 10
-var health = MAXHEALTH
+
 signal hit
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -79,10 +78,8 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func take_damage(damage):
-	health = health - damage
-	
-func get_health():
-	return health
+	Game.health = Game.health - damage
+
 		
 func Attack():
 	if lastDirection == 2:
@@ -95,6 +92,7 @@ func Attack():
 	if Sprite.frame == 6:
 		isAttack = false
 		take_damage(1)
+		print(Game.health)
 	#await  Sprite.animation_finished
 	
 
@@ -105,5 +103,4 @@ func _on_enemies_detection_body_entered(body):
 func death_player():
 	isDead = true
 	#Sprite.play("death")
-
 

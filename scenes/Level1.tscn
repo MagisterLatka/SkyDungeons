@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://d2fmxmw0dqnhu"]
+[gd_scene load_steps=34 format=3 uid="uid://d2fmxmw0dqnhu"]
 
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="1_x7emj"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="2_cav4v"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="4_pkx6c"]
 [ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="6_wounx"]
 [ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="7_bf71h"]
+[ext_resource type="Script" path="res://Label.gd" id="8_oevx6"]
+[ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_q4lnw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wu5d5"]
 size = Vector2(400, 400)
@@ -76,6 +78,21 @@ size = Vector2(100, 300)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87l64"]
 size = Vector2(500, 100)
+
+[sub_resource type="GDScript" id="GDScript_xdan4"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = str(Game.get_keys())
+	
+"
 
 [node name="Level1" type="Node2D"]
 
@@ -523,3 +540,32 @@ position = Vector2(1744, 152)
 [node name="Player1" parent="." instance=ExtResource("2_cav4v")]
 z_index = 1
 position = Vector2(200, 102)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hp" type="Label" parent="UI"]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 62.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 32
+text = "HP"
+script = ExtResource("8_oevx6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Keys" type="Label" parent="UI"]
+offset_left = 110.0
+offset_top = 565.0
+offset_right = 150.0
+offset_bottom = 588.0
+script = SubResource("GDScript_xdan4")
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="TextureRect" parent="UI"]
+offset_left = 43.0
+offset_top = 560.0
+offset_right = 98.5676
+offset_bottom = 600.0
+texture = ExtResource("9_q4lnw")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true

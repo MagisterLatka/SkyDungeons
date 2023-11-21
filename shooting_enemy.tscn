@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://be4gwefsbwpc7"]
+
+[ext_resource type="Script" path="res://shooting_enemy.gd" id="1_543jd"]
+[ext_resource type="Texture2D" uid="uid://bk0kes7j2huvx" path="res://icon.svg" id="1_hm3rl"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32jf3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hm3rl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl23m"]
+size = Vector2(128, 128)
+
+[node name="ShootingEnemy" type="Area2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_543jd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_32jf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pl23m")
+disabled = true
+
+[node name="ShootingCD" type="Timer" parent="."]
+autostart = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="timeout" from="ShootingCD" to="." method="_on_shooting_cd_timeout"]

@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cpwjhd0sgxc4x"]
+
+[ext_resource type="Script" path="res://BossEnemy.gd" id="1_aggtm"]
+[ext_resource type="Texture2D" uid="uid://ccyijhuvtw86r" path="res://icon.svg" id="2_0x730"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_32jf3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0x730")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pl23m"]
+size = Vector2(128, 128)
+
+[node name="BossEnemy" type="Area2D"]
+scale = Vector2(0.3, 0.3)
+script = ExtResource("1_aggtm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_32jf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_pl23m")
+disabled = true
+
+[node name="PauseInMovement" type="Timer" parent="."]
+one_shot = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
+[connection signal="timeout" from="PauseInMovement" to="." method="_on_shooting_cd_timeout" flags=18]

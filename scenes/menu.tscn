@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://djrc4t7y5tmhm"]
+[gd_scene load_steps=5 format=3 uid="uid://djrc4t7y5tmhm"]
 
 [ext_resource type="Texture2D" uid="uid://4hy7vvd0gij" path="res://assets/menuback.png" id="1_tq1j0"]
+[ext_resource type="Script" path="res://scenes/Start.gd" id="2_jabyn"]
 [ext_resource type="Script" path="res://scenes/quit.gd" id="2_qqf1o"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o05c1"]
@@ -32,6 +33,7 @@ offset_top = 123.0
 offset_right = 734.0
 offset_bottom = 217.0
 text_overrun_behavior = 3
+script = ExtResource("2_jabyn")
 
 [node name="Label" type="Label" parent="Start"]
 layout_mode = 0
@@ -99,4 +101,5 @@ label_settings = SubResource("LabelSettings_o05c1")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

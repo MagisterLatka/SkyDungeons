@@ -79,6 +79,9 @@ func _physics_process(delta):
 	
 func take_damage(damage):
 	Game.health = Game.health - damage
+	if Game.health <= 0:
+		Game.health = 0
+		isDead = true
 
 		
 func Attack():
@@ -91,7 +94,7 @@ func Attack():
 		
 	if Sprite.frame == 6:
 		isAttack = false
-		take_damage(1)
+		take_damage(4)
 		print(Game.health)
 	#await  Sprite.animation_finished
 	
@@ -99,8 +102,14 @@ func Attack():
 func _on_enemies_detection_body_entered(body):
 	if body.name == "Player":
 		print("Player xx")
-		
+
+#var test1 = preload("res://test1.tscn")
+
 func death_player():
-	isDead = true
-	#Sprite.play("death")
+	
+	if Sprite.frame == 8:
+		Sprite.frame = 8
+	else:
+		Sprite.play("death")
+
 

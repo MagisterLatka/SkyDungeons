@@ -16,6 +16,12 @@ func add_key():
 	
 func reduce_key():
 	numOfKeys -= 1
+	
+#func game_over():
+		
+
+func new_game():
+	get_tree().change_scene_to_file("res://scenes/Level0.tscn")
 
 func change_level():
 	if level == 0:

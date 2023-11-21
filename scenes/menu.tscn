@@ -1,0 +1,102 @@
+[gd_scene load_steps=4 format=3 uid="uid://djrc4t7y5tmhm"]
+
+[ext_resource type="Texture2D" uid="uid://4hy7vvd0gij" path="res://assets/menuback.png" id="1_tq1j0"]
+[ext_resource type="Script" path="res://scenes/quit.gd" id="2_qqf1o"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o05c1"]
+font_size = 64
+outline_size = 4
+outline_color = Color(1, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 1, 0.505882)
+shadow_offset = Vector2(2, 2)
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menuback" type="Sprite2D" parent="."]
+z_index = -2
+position = Vector2(576.75, 324.25)
+scale = Vector2(2.68182, 2.02978)
+texture = ExtResource("1_tq1j0")
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 123.0
+offset_right = 734.0
+offset_bottom = 217.0
+text_overrun_behavior = 3
+
+[node name="Label" type="Label" parent="Start"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 318.0
+offset_bottom = 93.0
+text = "Start"
+label_settings = SubResource("LabelSettings_o05c1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 465.0
+offset_right = 734.0
+offset_bottom = 559.0
+text_overrun_behavior = 3
+script = ExtResource("2_qqf1o")
+
+[node name="Label" type="Label" parent="Quit"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 318.0
+offset_bottom = 93.0
+text = "Quit"
+label_settings = SubResource("LabelSettings_o05c1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Authors" type="Button" parent="."]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 345.0
+offset_right = 734.0
+offset_bottom = 439.0
+text_overrun_behavior = 3
+
+[node name="Label" type="Label" parent="Authors"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 318.0
+offset_bottom = 93.0
+text = "Authors"
+label_settings = SubResource("LabelSettings_o05c1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="How" type="Button" parent="."]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 234.0
+offset_right = 761.0
+offset_bottom = 328.0
+scale = Vector2(1.08, 1)
+text_overrun_behavior = 3
+
+[node name="Label" type="Label" parent="How"]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 399.0
+offset_bottom = 93.0
+text = "How to play"
+label_settings = SubResource("LabelSettings_o05c1")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

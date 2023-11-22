@@ -12,8 +12,7 @@ func set_offset(arg: int):
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	position = get_parent().position
-	Player = get_parent().get_node("Level0/Player1")
+	Player = get_parent().get_node("Player1")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
@@ -29,8 +28,3 @@ func _on_visible_on_screen_notifier_2d_screen_exited():
 	
 func on_hit_with_entity():
 	queue_free()
-
-
-func _on_body_entered(body):
-	if body == Player:
-		Player.take_damage(1)

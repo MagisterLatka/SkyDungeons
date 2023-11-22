@@ -497,6 +497,7 @@ wait_time = 2.0
 
 [node name="ShootingEnemy" parent="." groups=["mobs"] instance=ExtResource("10_lfnvt")]
 position = Vector2(286, 562)
+scale = Vector2(1, 1)
 
 [node name="BossEnemy" parent="." groups=["mobs"] instance=ExtResource("11_gf35k")]
 position = Vector2(111, 678)

@@ -1,7 +1,7 @@
 extends Area2D
 
 var arrow = preload("res://arrow.tscn")
-var health = 8
+var health = 3
 var startPoint: Vector2
 var currentlyInStage: int = 1 
 var currentlyMoving = false
@@ -56,7 +56,7 @@ func _physics_process(delta):
 					for i in range(-1, 2):
 						var projectile = arrow.instantiate()
 						projectile.set_offset(i)
-						get_node("/root").add_child(projectile)
+						get_parent().add_child(projectile)
 						projectile.transform = global_transform
 					$PauseInMovement.start(1)
 					waiting = true
@@ -76,7 +76,7 @@ func _physics_process(delta):
 					for i in range(-4, 4):
 						var projectile = arrow.instantiate()
 						projectile.set_offset(i)
-						get_node("/root").add_child(projectile)
+						get_parent().add_child(projectile)
 						projectile.transform = global_transform
 					$PauseInMovement.start(2)
 					waiting = true
@@ -87,7 +87,3 @@ func _on_shooting_cd_timeout():
 	if currentlyInStage >= 5:
 		currentlyInStage = 1
 	waiting = false
-
-func take_damage(damage):
-	health = health - damage
-	#print(health)

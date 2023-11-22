@@ -1,13 +1,38 @@
-[gd_scene load_steps=5 format=3 uid="uid://be4gwefsbwpc7"]
+[gd_scene load_steps=9 format=3 uid="uid://be4gwefsbwpc7"]
 
 [ext_resource type="Script" path="res://shooting_enemy.gd" id="1_543jd"]
-[ext_resource type="Texture2D" uid="uid://ccyijhuvtw86r" path="res://icon.svg" id="1_hm3rl"]
+[ext_resource type="Texture2D" uid="uid://jqmwtrj17td2" path="res://assets/shooting_enemy.png" id="2_c5gag"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q68w7"]
+atlas = ExtResource("2_c5gag")
+region = Rect2(0, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncwhv"]
+atlas = ExtResource("2_c5gag")
+region = Rect2(200, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8rhe"]
+atlas = ExtResource("2_c5gag")
+region = Rect2(400, 0, 200, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3ucr"]
+atlas = ExtResource("2_c5gag")
+region = Rect2(600, 0, 200, 200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_32jf3"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_hm3rl")
+"texture": SubResource("AtlasTexture_q68w7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ncwhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8rhe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3ucr")
 }],
 "loop": true,
 "name": &"default",
@@ -15,21 +40,25 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pl23m"]
-size = Vector2(128, 128)
+size = Vector2(20, 30)
 
 [node name="ShootingEnemy" type="Area2D"]
 scale = Vector2(0.1, 0.1)
 script = ExtResource("1_543jd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_32jf3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.999999, 0.999999)
 shape = SubResource("RectangleShape2D_pl23m")
+disabled = true
 
 [node name="ShootingCD" type="Timer" parent="."]
 autostart = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+scale = Vector2(1, 1.5)
 
 [connection signal="timeout" from="ShootingCD" to="." method="_on_shooting_cd_timeout"]

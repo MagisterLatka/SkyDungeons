@@ -26,6 +26,7 @@ sprite_frames = SubResource("SpriteFrames_32jf3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_pl23m")
+disabled = true
 
 [node name="PauseInMovement" type="Timer" parent="."]
 one_shot = true

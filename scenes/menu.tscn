@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://djrc4t7y5tmhm"]
+[gd_scene load_steps=6 format=3 uid="uid://djrc4t7y5tmhm"]
 
 [ext_resource type="Texture2D" uid="uid://4hy7vvd0gij" path="res://assets/menuback.png" id="1_tq1j0"]
 [ext_resource type="Script" path="res://scenes/Start.gd" id="2_jabyn"]
 [ext_resource type="Script" path="res://scenes/quit.gd" id="2_qqf1o"]
+[ext_resource type="AudioStream" uid="uid://byeskhefrl5o6" path="res://assets/music/menuMusic.wav" id="4_yuivk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o05c1"]
 font_size = 64
@@ -100,6 +101,10 @@ text = "How to play"
 label_settings = SubResource("LabelSettings_o05c1")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_yuivk")
+autoplay = true
 
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Quit" to="Quit" method="_on_pressed"]

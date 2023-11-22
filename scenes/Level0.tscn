@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://m58ofjv8cmch"]
+[gd_scene load_steps=27 format=3 uid="uid://m58ofjv8cmch"]
 
 [ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://assets/levels/avfe8431941181a9afdae.png" id="1_6tlw5"]
 [ext_resource type="Script" path="res://Label.gd" id="1_kdqu4"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://w0exod3bjubo" path="res://scenes/enemy.tscn" id="11_72cwa"]
 [ext_resource type="PackedScene" uid="uid://cpwjhd0sgxc4x" path="res://boss_enemy.tscn" id="11_gf35k"]
 [ext_resource type="PackedScene" uid="uid://b5ixaquo5kv3e" path="res://scenes/stairsup.tscn" id="11_unorh"]
+[ext_resource type="AudioStream" uid="uid://bogkpcr4ntt83" path="res://assets/music/dungeonMusic.wav" id="12_fd2c0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_47e13"]
 size = Vector2(179.8, 100)
@@ -503,5 +504,9 @@ position = Vector2(68, 291)
 
 [node name="ShootingEnemy" parent="." groups=["mobs"] instance=ExtResource("10_lfnvt")]
 position = Vector2(344, 549)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_fd2c0")
+autoplay = true
 
 [connection signal="timeout" from="Stairsup2/Timer1" to="Stairsup2" method="_on_timer_timeout"]

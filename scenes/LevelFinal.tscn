@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://lpef13waem4q"]
+[gd_scene load_steps=14 format=3 uid="uid://lpef13waem4q"]
 
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_7lbwl"]
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="2_6f815"]
 [ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="3_2w5mh"]
 [ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="4_j3s75"]
+[ext_resource type="AudioStream" uid="uid://bogkpcr4ntt83" path="res://assets/music/dungeonMusic.wav" id="5_0ulss"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtn7k"]
 size = Vector2(1600, 200)
@@ -246,3 +247,6 @@ position = Vector2(-100, 800)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LockedWall/Area2D"]
 shape = SubResource("RectangleShape2D_d5ouj")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_0ulss")

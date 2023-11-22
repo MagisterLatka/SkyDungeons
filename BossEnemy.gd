@@ -1,7 +1,7 @@
 extends Area2D
 
 var arrow = preload("res://arrow.tscn")
-var health = 3
+var health = 8
 var startPoint: Vector2
 var currentlyInStage: int = 1 
 var currentlyMoving = false
@@ -87,3 +87,7 @@ func _on_shooting_cd_timeout():
 	if currentlyInStage >= 5:
 		currentlyInStage = 1
 	waiting = false
+
+func take_damage(damage):
+	health = health - damage
+	#print(health)

@@ -1,7 +1,7 @@
 extends Area2D
 
 var arrow = preload("res://arrow.tscn")
-var health = 3
+var health = 2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,3 +20,7 @@ func _on_shooting_cd_timeout():
 		projectile.set_offset(0)
 		get_node("/root").add_child(projectile)
 		projectile.transform = global_transform
+
+func take_damage(damage):
+	health = health - damage
+	#print(health)

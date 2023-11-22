@@ -2,13 +2,12 @@ extends CharacterBody2D
 
 
 const SPEED = 200.0
-const JUMP_VELOCITY = -400.0
-
 signal hit
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var Sprite = $AnimatedSprite2D
+@onready var anim = $AnimationPlayer
 var lastDirection = 1 #1 - w prawo, 2 - w dol, 3 - w lewo, 4 - w gore
 var screen_size
 var isAttack = false
@@ -16,7 +15,11 @@ var isDead = false
 
 func _ready():
 	screen_size = get_viewport_rect().size
-
+	$SwordHit_Right/CollisionShape2D.disabled = true
+	$SwordHit_Left/CollisionShape2D.disabled = true
+	$SwordHit_Down/CollisionShape2D.disabled = true
+	$SwordHit_Up/CollisionShape2D.disabled = true
+	
 func _physics_process(delta):
 
 	if !isAttack && !isDead:
@@ -68,10 +71,6 @@ func _physics_process(delta):
 			
 	elif isAttack:
 		Attack()
-	#	Sprite.play("attack")
-	#	if Sprite.frame == 6:
-		#	#print("tu")
-		#	isAttack = false
 	else:
 		death_player()
 		
@@ -86,24 +85,19 @@ func take_damage(damage):
 		
 func Attack():
 	if lastDirection == 2:
-		Sprite.play("attack_down")
+		anim.play("attack_down")
 	elif lastDirection == 4:
-		Sprite.play("attack_up"	)
+		anim.play("attack_up"	)
+	elif lastDirection == 3:
+		anim.play("attack_left")
 	else:
-		Sprite.play("attack_left_right")
+		anim.play("attack_right")
 		
 	if Sprite.frame == 6:
-		isAttack = false
-		take_damage(4)
-		print(Game.health)
-	#await  Sprite.animation_finished
-	
+		isAttack = false	
 
 func _on_enemies_detection_body_entered(body):
-	if body.name == "Player":
-		print("Player xx")
-
-#var test1 = preload("res://test1.tscn")
+	pass
 
 func death_player():
 	
@@ -113,3 +107,26 @@ func death_player():
 		Sprite.play("death")
 
 
+func _on_sword_hit_area_entered(area):
+
+	if area.is_in_group("mobs"):
+		print("tu")
+		area.take_damage(1)
+	
+	
+func _on_sword_hit_down_area_entered(area):
+	if area.is_in_group("mobs"):
+		print("tu")
+		area.take_damage(1)
+
+
+func _on_sword_hit_up_area_entered(area):
+	if area.is_in_group("mobs"):
+		print("tu")
+		area.take_damage(1)
+
+
+func _on_sword_hit_left_area_entered(area):
+	if area.is_in_group("mobs"):
+		#print("tu")
+		area.take_damage(1)

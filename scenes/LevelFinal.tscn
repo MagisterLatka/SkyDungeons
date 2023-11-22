@@ -1,0 +1,248 @@
+[gd_scene load_steps=13 format=3 uid="uid://lpef13waem4q"]
+
+[ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_7lbwl"]
+[ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="2_6f815"]
+[ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="3_2w5mh"]
+[ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="4_j3s75"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xtn7k"]
+size = Vector2(1600, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_43wth"]
+size = Vector2(1600, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rq1r3"]
+size = Vector2(400, 900)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pusa"]
+size = Vector2(200, 800)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8a74"]
+size = Vector2(400, 900)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ueff"]
+size = Vector2(400, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t630a"]
+size = Vector2(400, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5ouj"]
+size = Vector2(200, 200)
+
+[node name="LevelFinal" type="Node2D"]
+
+[node name="Walls" type="StaticBody2D" parent="."]
+
+[node name="Wall0" type="CollisionShape2D" parent="Walls"]
+position = Vector2(800, -100)
+shape = SubResource("RectangleShape2D_xtn7k")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall0"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 6400, 800)
+
+[node name="Wall1" type="CollisionShape2D" parent="Walls"]
+position = Vector2(800, 1700)
+shape = SubResource("RectangleShape2D_43wth")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall1"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 6400, 800)
+
+[node name="Wall2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1800, 250)
+shape = SubResource("RectangleShape2D_rq1r3")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall2"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 3600)
+
+[node name="Wall3" type="CollisionShape2D" parent="Walls"]
+position = Vector2(1800, 1350)
+shape = SubResource("RectangleShape2D_1pusa")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall3"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 3600)
+
+[node name="Wall4" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-200, 1350)
+shape = SubResource("RectangleShape2D_d8a74")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall4"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 3600)
+
+[node name="Wall5" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-200, 250)
+shape = SubResource("RectangleShape2D_rq1r3")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall5"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 3600)
+
+[node name="Wall6" type="CollisionShape2D" parent="Walls"]
+position = Vector2(2200, 500)
+shape = SubResource("RectangleShape2D_8ueff")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall6"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 800)
+
+[node name="Wall7" type="CollisionShape2D" parent="Walls"]
+position = Vector2(2200, 1100)
+shape = SubResource("RectangleShape2D_t630a")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall7"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 800)
+
+[node name="Wall8" type="CollisionShape2D" parent="Walls"]
+texture_repeat = 3
+position = Vector2(2500, 800)
+shape = SubResource("RectangleShape2D_1pusa")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall8"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 3200)
+
+[node name="Wall9" type="CollisionShape2D" parent="Walls"]
+texture_repeat = 3
+position = Vector2(-900, 800)
+shape = SubResource("RectangleShape2D_1pusa")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall9"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 3200)
+
+[node name="Wall10" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-600, 1100)
+shape = SubResource("RectangleShape2D_t630a")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall10"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 800)
+
+[node name="Wall11" type="CollisionShape2D" parent="Walls"]
+position = Vector2(-600, 500)
+shape = SubResource("RectangleShape2D_t630a")
+
+[node name="Brickwall" type="Sprite2D" parent="Walls/Wall11"]
+texture_repeat = 3
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 800)
+
+[node name="Rooms" type="Node" parent="."]
+
+[node name="Room0" type="Sprite2D" parent="Rooms"]
+z_index = -2
+texture_filter = 1
+texture_repeat = 3
+texture = ExtResource("2_6f815")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 1600)
+
+[node name="Room1" type="Sprite2D" parent="Rooms"]
+z_index = -2
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(2000, 600)
+texture = ExtResource("2_6f815")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 400)
+
+[node name="Room2" type="Sprite2D" parent="Rooms"]
+z_index = -2
+texture_filter = 1
+texture_repeat = 3
+position = Vector2(-800, 600)
+texture = ExtResource("2_6f815")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 400)
+
+[node name="Corridors" type="Node" parent="."]
+
+[node name="Corr0" type="Sprite2D" parent="Corridors"]
+z_index = -2
+position = Vector2(1600, 700)
+scale = Vector2(1, 0.5)
+texture = ExtResource("2_6f815")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 400)
+
+[node name="Corr1" type="Sprite2D" parent="Corridors"]
+z_index = -2
+position = Vector2(-400, 700)
+scale = Vector2(1, 0.5)
+texture = ExtResource("2_6f815")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 400)
+
+[node name="StairsUp" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(2365, 966)
+scale = Vector2(0.2, 0.3)
+texture = ExtResource("3_2w5mh")
+region_enabled = true
+region_rect = Rect2(15, 20, 262, 154)
+
+[node name="LockedWall" type="Node" parent="."]
+
+[node name="Wall" type="Sprite2D" parent="LockedWall"]
+texture_repeat = 3
+position = Vector2(-200, 800)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_7lbwl")
+region_enabled = true
+region_rect = Rect2(0, 0, 1600, 800)
+
+[node name="Lock" type="Sprite2D" parent="LockedWall"]
+position = Vector2(-100, 800)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_j3s75")
+
+[node name="Area2D" type="Area2D" parent="LockedWall"]
+position = Vector2(-100, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LockedWall/Area2D"]
+shape = SubResource("RectangleShape2D_d5ouj")

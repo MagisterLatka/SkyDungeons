@@ -495,14 +495,13 @@ position = Vector2(933, 539)
 [node name="Timer1" type="Timer" parent="Stairsup2"]
 wait_time = 2.0
 
-[node name="ShootingEnemy" parent="." groups=["mobs"] instance=ExtResource("10_lfnvt")]
-position = Vector2(286, 562)
-scale = Vector2(1, 1)
-
 [node name="BossEnemy" parent="." groups=["mobs"] instance=ExtResource("11_gf35k")]
 position = Vector2(111, 678)
 
 [node name="Enemy" parent="." groups=["mobs"] instance=ExtResource("11_72cwa")]
 position = Vector2(68, 291)
+
+[node name="ShootingEnemy" parent="." groups=["mobs"] instance=ExtResource("10_lfnvt")]
+position = Vector2(344, 549)
 
 [connection signal="timeout" from="Stairsup2/Timer1" to="Stairsup2" method="_on_timer_timeout"]

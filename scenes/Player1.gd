@@ -128,5 +128,5 @@ func _on_sword_hit_up_area_entered(area):
 
 func _on_sword_hit_left_area_entered(area):
 	if area.is_in_group("mobs"):
-		#print("tu")
+		print("tu")
 		area.take_damage(1)

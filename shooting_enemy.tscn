@@ -40,25 +40,25 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pl23m"]
-size = Vector2(20, 30)
+size = Vector2(85.0001, 120)
 
 [node name="ShootingEnemy" type="Area2D"]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_543jd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_32jf3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(0.999999, 0.999999)
+position = Vector2(2.5, 5)
+scale = Vector2(0.999998, 0.999998)
 shape = SubResource("RectangleShape2D_pl23m")
-disabled = true
 
 [node name="ShootingCD" type="Timer" parent="."]
 autostart = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-scale = Vector2(1, 1.5)
+position = Vector2(2.5, 5.00001)
+scale = Vector2(4.25, 6)
 
 [connection signal="timeout" from="ShootingCD" to="." method="_on_shooting_cd_timeout"]

@@ -31,3 +31,6 @@ func _on_shooting_cd_timeout():
 		get_parent().add_child(projectile)
 		projectile.transform = global_transform
 		projectile.scale = Vector2(0.1, 0.1)
+
+func take_damage(damage):
+	health = health - damage

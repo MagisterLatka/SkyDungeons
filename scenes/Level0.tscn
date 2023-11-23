@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://m58ofjv8cmch"]
+[gd_scene load_steps=26 format=3 uid="uid://m58ofjv8cmch"]
 
 [ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://assets/levels/avfe8431941181a9afdae.png" id="1_6tlw5"]
 [ext_resource type="Script" path="res://Label.gd" id="1_kdqu4"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="9_txsj8"]
 [ext_resource type="PackedScene" uid="uid://be4gwefsbwpc7" path="res://shooting_enemy.tscn" id="10_lfnvt"]
 [ext_resource type="PackedScene" uid="uid://w0exod3bjubo" path="res://scenes/enemy.tscn" id="11_72cwa"]
-[ext_resource type="PackedScene" uid="uid://cpwjhd0sgxc4x" path="res://boss_enemy.tscn" id="11_gf35k"]
 [ext_resource type="PackedScene" uid="uid://b5ixaquo5kv3e" path="res://scenes/stairsup.tscn" id="11_unorh"]
 [ext_resource type="AudioStream" uid="uid://bogkpcr4ntt83" path="res://assets/music/dungeonMusic.wav" id="12_fd2c0"]
 
@@ -495,9 +494,6 @@ position = Vector2(933, 539)
 
 [node name="Timer1" type="Timer" parent="Stairsup2"]
 wait_time = 2.0
-
-[node name="BossEnemy" parent="." groups=["mobs"] instance=ExtResource("11_gf35k")]
-position = Vector2(111, 678)
 
 [node name="Enemy" parent="." groups=["mobs"] instance=ExtResource("11_72cwa")]
 position = Vector2(68, 291)

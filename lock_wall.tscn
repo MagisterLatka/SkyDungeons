@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://b14of11517fa2"]
+
+[ext_resource type="Script" path="res://lock_wall.gd" id="1_8bjgv"]
+[ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_gvbjm"]
+[ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="2_xku0v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ghp"]
+size = Vector2(99, 97)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_opo0s"]
+size = Vector2(166, 165)
+
+[node name="LockWall" type="StaticBody2D"]
+script = ExtResource("1_8bjgv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_l8ghp")
+
+[node name="Area2D" type="Area2D" parent="CollisionShape2D2"]
+
+[node name="Wall" type="Sprite2D" parent="CollisionShape2D2/Area2D"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_gvbjm")
+region_enabled = true
+region_rect = Rect2(0, 0, 400, 400)
+
+[node name="Lock" type="Sprite2D" parent="CollisionShape2D2/Area2D"]
+position = Vector2(-1, -3)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_xku0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionShape2D2/Area2D"]
+position = Vector2(4, -1.5)
+shape = SubResource("RectangleShape2D_opo0s")
+
+[connection signal="body_entered" from="CollisionShape2D2/Area2D" to="." method="_on_area_2d_body_entered"]

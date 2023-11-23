@@ -26,4 +26,8 @@ func new_game():
 func change_level():
 	if level == 0:
 		get_tree().change_scene_to_file("res://scenes/Level1.tscn")
-	level += 1
+		level = 1
+	elif level == 1:
+		get_tree().change_scene_to_file("res://scenes/LevelFinal.tscn")
+		level == 2
+	

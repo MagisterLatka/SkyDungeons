@@ -1,11 +1,12 @@
-[gd_scene load_steps=37 format=3 uid="uid://d2fmxmw0dqnhu"]
+[gd_scene load_steps=38 format=3 uid="uid://d2fmxmw0dqnhu"]
 
 [ext_resource type="Texture2D" uid="uid://c6a7iqjy2u8kb" path="res://assets/levels/pixil-frame-0(6).png" id="1_8gao3"]
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="1_x7emj"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="2_cav4v"]
 [ext_resource type="PackedScene" uid="uid://b14of11517fa2" path="res://lock_wall.tscn" id="2_halg5"]
-[ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="3_6dojc"]
+[ext_resource type="Texture2D" uid="uid://cj1qos30jhkoc" path="res://assets/levels/cloud2.png" id="2_ymh7r"]
 [ext_resource type="Texture2D" uid="uid://cangckw36ftqr" path="res://assets/levels/stairsdown.png" id="3_lp3ck"]
+[ext_resource type="Texture2D" uid="uid://cisb10xcd3fuj" path="res://assets/levels/tile3.png" id="4_u6lgo"]
 [ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="7_bf71h"]
 [ext_resource type="Script" path="res://Label.gd" id="8_oevx6"]
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_q4lnw"]
@@ -100,10 +101,12 @@ func _process(delta):
 [node name="Rooms" type="Node" parent="."]
 
 [node name="Room0" type="Sprite2D" parent="Rooms"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 z_index = -2
 texture_repeat = 3
+position = Vector2(-5, 8)
 texture = ExtResource("1_8gao3")
 centered = false
 region_enabled = true
@@ -114,13 +117,15 @@ light_mask = 2
 visibility_layer = 2
 z_index = -2
 texture_repeat = 3
-position = Vector2(-700, 200)
-texture = ExtResource("1_8gao3")
+position = Vector2(-1337, -4)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ymh7r")
 centered = false
 region_enabled = true
-region_rect = Rect2(0, 0, 300, 300)
+region_rect = Rect2(0, 0, 12550, 7225)
 
 [node name="Room2" type="Sprite2D" parent="Rooms"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 z_index = -2
@@ -132,6 +137,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 600, 400)
 
 [node name="Room3" type="Sprite2D" parent="Rooms"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 z_index = -2
@@ -143,6 +149,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 300, 300)
 
 [node name="Room4" type="Sprite2D" parent="Rooms"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 z_index = -2
@@ -156,6 +163,7 @@ region_rect = Rect2(0, 0, 600, 600)
 [node name="Corridors" type="Node" parent="."]
 
 [node name="Corridor" type="Sprite2D" parent="Corridors"]
+visible = false
 light_mask = 2
 visibility_layer = 2
 z_index = -2
@@ -167,6 +175,7 @@ region_enabled = true
 region_rect = Rect2(0, 0, 100, 100)
 
 [node name="Corridor1" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 position = Vector2(-400, 200)
 texture = ExtResource("1_x7emj")
@@ -175,6 +184,7 @@ region_enabled = true
 region_rect = Rect2(0, 150, 400, 100)
 
 [node name="Corridor2" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 position = Vector2(-400, 400)
 texture = ExtResource("1_x7emj")
@@ -183,6 +193,7 @@ region_enabled = true
 region_rect = Rect2(150, 0, 100, 300)
 
 [node name="Corridor3" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 texture_repeat = 2
 position = Vector2(0, 500)
@@ -192,6 +203,7 @@ region_enabled = true
 region_rect = Rect2(150, 0, 100, 800)
 
 [node name="Corridor4" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 texture_repeat = 3
 position = Vector2(-800, 700)
@@ -201,6 +213,7 @@ region_enabled = true
 region_rect = Rect2(0, 150, 800, 100)
 
 [node name="Corridor5" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 position = Vector2(100, 1200)
 texture = ExtResource("1_x7emj")
@@ -209,6 +222,7 @@ region_enabled = true
 region_rect = Rect2(200, 150, 200, 100)
 
 [node name="Corridor6" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 position = Vector2(-800, 1300)
 texture = ExtResource("1_x7emj")
@@ -217,6 +231,7 @@ region_enabled = true
 region_rect = Rect2(150, 0, 100, 300)
 
 [node name="Corridor7" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 position = Vector2(500, 400)
 texture = ExtResource("1_x7emj")
@@ -225,6 +240,7 @@ region_enabled = true
 region_rect = Rect2(0, 150, 400, 100)
 
 [node name="Corridor8" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 texture_repeat = 2
 position = Vector2(900, 0)
@@ -234,6 +250,7 @@ region_enabled = true
 region_rect = Rect2(150, 0, 100, 1200)
 
 [node name="Corridor9" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 position = Vector2(1000, 600)
 texture = ExtResource("1_x7emj")
@@ -250,7 +267,7 @@ shape = SubResource("RectangleShape2D_m34sm")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall0"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 13000, 1000)
 
@@ -260,10 +277,11 @@ shape = SubResource("RectangleShape2D_prf1w")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall1"]
 texture_repeat = 2
+position = Vector2(-351, -63)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
-region_rect = Rect2(0, 0, 8000, 1000)
+region_rect = Rect2(0, 0, 15000, 2250)
 
 [node name="Wall2" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-50, 50)
@@ -272,7 +290,7 @@ shape = SubResource("RectangleShape2D_2hm6o")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall2"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 1000)
 
@@ -283,7 +301,7 @@ shape = SubResource("RectangleShape2D_iw3gf")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall3"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 4000, 4000)
 
@@ -294,7 +312,7 @@ shape = SubResource("RectangleShape2D_oss6d")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall4"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 3000, 2000)
 
@@ -305,7 +323,7 @@ shape = SubResource("RectangleShape2D_tqbhh")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall5"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 4000, 1000)
 
@@ -316,7 +334,7 @@ shape = SubResource("RectangleShape2D_2mjqo")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall6"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 3000, 3000)
 
@@ -327,7 +345,7 @@ shape = SubResource("RectangleShape2D_0kynw")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall7"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 5000)
 
@@ -338,7 +356,7 @@ shape = SubResource("RectangleShape2D_y7vol")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall8"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 8000, 7000)
 
@@ -349,7 +367,7 @@ shape = SubResource("RectangleShape2D_j5qmk")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall9"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 2000, 6000)
 
@@ -360,7 +378,7 @@ shape = SubResource("RectangleShape2D_k4gbt")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall10"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 8000, 6000)
 
@@ -371,7 +389,7 @@ shape = SubResource("RectangleShape2D_b3b37")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall11"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 7000, 10000)
 
@@ -381,10 +399,11 @@ shape = SubResource("RectangleShape2D_wxqfe")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall12"]
 texture_repeat = 2
+position = Vector2(-51, -226)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
-region_rect = Rect2(0, 0, 5000, 3000)
+region_rect = Rect2(0, 0, 6000, 7500)
 
 [node name="Wall13" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-1350, 1100)
@@ -393,7 +412,7 @@ shape = SubResource("RectangleShape2D_sdrf3")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall13"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 6000)
 
@@ -403,10 +422,11 @@ shape = SubResource("RectangleShape2D_dqotx")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall14"]
 texture_repeat = 2
+position = Vector2(-26, -1)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
-region_rect = Rect2(0, 0, 5000, 2000)
+region_rect = Rect2(0, 0, 5500, 2000)
 
 [node name="Wall15" type="CollisionShape2D" parent="Walls"]
 position = Vector2(1500, 50)
@@ -415,7 +435,7 @@ shape = SubResource("RectangleShape2D_3mo24")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall15"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 6000, 1000)
 
@@ -426,7 +446,7 @@ shape = SubResource("RectangleShape2D_3e1ng")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall16"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 8000)
 
@@ -436,10 +456,11 @@ shape = SubResource("RectangleShape2D_3pjsd")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall17"]
 texture_repeat = 2
+position = Vector2(-200, 0)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
-region_rect = Rect2(0, 0, 2000, 1000)
+region_rect = Rect2(0, 0, 6000, 1000)
 
 [node name="Wall18" type="CollisionShape2D" parent="Walls"]
 position = Vector2(150, 1350)
@@ -447,10 +468,11 @@ shape = SubResource("RectangleShape2D_cwm31")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall18"]
 texture_repeat = 2
+position = Vector2(598, 99)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
-region_rect = Rect2(0, 0, 3000, 1000)
+region_rect = Rect2(0, 0, 15000, 3000)
 
 [node name="Wall19" type="CollisionShape2D" parent="Walls"]
 position = Vector2(350, 1300)
@@ -459,7 +481,7 @@ shape = SubResource("RectangleShape2D_6klw0")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall19"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 2000)
 
@@ -470,7 +492,7 @@ shape = SubResource("RectangleShape2D_6klw0")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall20"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 1000, 2000)
 
@@ -480,10 +502,11 @@ shape = SubResource("RectangleShape2D_85l2o")
 
 [node name="Wall" type="Sprite2D" parent="Walls/Wall21"]
 texture_repeat = 2
+position = Vector2(-100, 0)
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
-region_rect = Rect2(0, 0, 1000, 3000)
+region_rect = Rect2(0, 0, 3000, 3000)
 
 [node name="Wall22" type="CollisionShape2D" parent="Walls"]
 position = Vector2(-950, 1850)
@@ -492,7 +515,7 @@ shape = SubResource("RectangleShape2D_87l64")
 [node name="Wall" type="Sprite2D" parent="Walls/Wall22"]
 texture_repeat = 2
 scale = Vector2(0.1, 0.1)
-texture = ExtResource("3_6dojc")
+texture = ExtResource("4_u6lgo")
 region_enabled = true
 region_rect = Rect2(0, 0, 5000, 1000)
 

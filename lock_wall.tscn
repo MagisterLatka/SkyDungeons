@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b14of11517fa2"]
 
 [ext_resource type="Script" path="res://lock_wall.gd" id="1_8bjgv"]
-[ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_gvbjm"]
+[ext_resource type="Texture2D" uid="uid://cisb10xcd3fuj" path="res://assets/levels/tile3.png" id="2_22ugj"]
 [ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="2_xku0v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l8ghp"]
@@ -21,7 +21,7 @@ shape = SubResource("RectangleShape2D_l8ghp")
 
 [node name="Wall" type="Sprite2D" parent="CollisionShape2D2/Area2D"]
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_gvbjm")
+texture = ExtResource("2_22ugj")
 region_enabled = true
 region_rect = Rect2(0, 0, 400, 400)
 

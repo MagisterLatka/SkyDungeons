@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy871tyrixk8i"]
+
+[ext_resource type="Script" path="res://scenes/OutroLabel.gd" id="1_qleqj"]
+[ext_resource type="Script" path="res://scenes/quit.gd" id="2_xsnyl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nt2hx"]
+font_size = 32
+
+[node name="Outro" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.180392, 0.180392, 0.180392, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "Congratulations adventurer.
+You managed to get the legendary nectar
+and became immortal.
+But...
+The power of the true gods
+is yet to be discovered..."
+label_settings = SubResource("LabelSettings_nt2hx")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+script = ExtResource("1_qleqj")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 1.0
+offset_top = 548.0
+offset_right = 1153.0
+offset_bottom = 648.0
+text = "Quit"
+script = ExtResource("2_xsnyl")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

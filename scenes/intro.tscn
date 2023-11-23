@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://odhcuiu2t77n"]
+
+[ext_resource type="Script" path="res://scenes/IntroLabel.gd" id="1_5qvs6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8nfy6"]
+font_size = 32
+
+[node name="Intro" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.180392, 0.180392, 0.180392, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+text = "Divine nectar... 
+Were you to obtain it,
+you would become immortal.
+Many have tried to get it,
+but all have failed.
+Will you manage to be
+the first successful, adventurer?"
+label_settings = SubResource("LabelSettings_8nfy6")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+visible_characters = 0
+visible_ratio = 0.0
+script = ExtResource("1_5qvs6")
+
+[node name="Button" type="Button" parent="."]
+visible = false
+offset_left = 1.0
+offset_top = 548.0
+offset_right = 1153.0
+offset_bottom = 648.0
+text = "Press to continue..."

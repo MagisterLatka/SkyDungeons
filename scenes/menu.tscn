@@ -29,8 +29,8 @@ grow_vertical = 2
 
 [node name="Menuback" type="Sprite2D" parent="."]
 z_index = -2
-position = Vector2(576.75, 324.25)
-scale = Vector2(2.68182, 2.02978)
+position = Vector2(576, 324)
+scale = Vector2(3.01571, 2.48276)
 texture = ExtResource("1_tq1j0")
 
 [node name="Start" type="Button" parent="."]

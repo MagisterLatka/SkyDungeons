@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://lpef13waem4q"]
 
-[ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_7lbwl"]
-[ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="2_6f815"]
+[ext_resource type="Texture2D" uid="uid://cisb10xcd3fuj" path="res://assets/levels/tile3.png" id="1_447do"]
+[ext_resource type="Texture2D" uid="uid://c6a7iqjy2u8kb" path="res://assets/levels/pixil-frame-0(6).png" id="2_uip2b"]
 [ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="3_2w5mh"]
 [ext_resource type="AudioStream" uid="uid://bcovgxjkl0cxv" path="res://assets/music/bossMusic.wav" id="4_dnj6r"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="6_li0xt"]
@@ -58,7 +58,7 @@ shape = SubResource("RectangleShape2D_xtn7k")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall0"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 6400, 800)
 
@@ -69,7 +69,7 @@ shape = SubResource("RectangleShape2D_43wth")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall1"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 6400, 800)
 
@@ -80,7 +80,7 @@ shape = SubResource("RectangleShape2D_rq1r3")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall2"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 3600)
 
@@ -91,7 +91,7 @@ shape = SubResource("RectangleShape2D_1pusa")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall3"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 3600)
 
@@ -102,7 +102,7 @@ shape = SubResource("RectangleShape2D_d8a74")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall4"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 3600)
 
@@ -113,7 +113,7 @@ shape = SubResource("RectangleShape2D_rq1r3")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall5"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 3600)
 
@@ -124,7 +124,7 @@ shape = SubResource("RectangleShape2D_8ueff")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall6"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 800)
 
@@ -135,7 +135,7 @@ shape = SubResource("RectangleShape2D_t630a")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall7"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 800)
 
@@ -147,7 +147,7 @@ shape = SubResource("RectangleShape2D_1pusa")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall8"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 800, 3200)
 
@@ -159,7 +159,7 @@ shape = SubResource("RectangleShape2D_1pusa")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall9"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 800, 3200)
 
@@ -170,7 +170,7 @@ shape = SubResource("RectangleShape2D_t630a")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall10"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 800)
 
@@ -181,7 +181,7 @@ shape = SubResource("RectangleShape2D_t630a")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall11"]
 texture_repeat = 3
 scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
+texture = ExtResource("1_447do")
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 800)
 
@@ -191,7 +191,7 @@ region_rect = Rect2(0, 0, 1600, 800)
 z_index = -2
 texture_filter = 1
 texture_repeat = 3
-texture = ExtResource("2_6f815")
+texture = ExtResource("2_uip2b")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1600, 1600)
@@ -200,38 +200,41 @@ region_rect = Rect2(0, 0, 1600, 1600)
 z_index = -2
 texture_filter = 1
 texture_repeat = 3
-position = Vector2(2000, 600)
-texture = ExtResource("2_6f815")
+position = Vector2(1601, 502)
+scale = Vector2(1.20238, 1)
+texture = ExtResource("2_uip2b")
 centered = false
 region_enabled = true
-region_rect = Rect2(0, 0, 400, 400)
+region_rect = Rect2(0, -128, 672, 625.077)
 
 [node name="Room2" type="Sprite2D" parent="Rooms"]
 z_index = -2
 texture_filter = 1
 texture_repeat = 3
 position = Vector2(-800, 600)
-texture = ExtResource("2_6f815")
+texture = ExtResource("2_uip2b")
 centered = false
 region_enabled = true
-region_rect = Rect2(0, 0, 400, 400)
+region_rect = Rect2(0, 0, 800, 400)
 
 [node name="Corridors" type="Node" parent="."]
 
 [node name="Corr0" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 position = Vector2(1600, 700)
 scale = Vector2(1, 0.5)
-texture = ExtResource("2_6f815")
+texture = ExtResource("2_uip2b")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 400, 400)
 
 [node name="Corr1" type="Sprite2D" parent="Corridors"]
+visible = false
 z_index = -2
 position = Vector2(-400, 700)
 scale = Vector2(1, 0.5)
-texture = ExtResource("2_6f815")
+texture = ExtResource("2_uip2b")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 400, 400)

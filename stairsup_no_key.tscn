@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3lwkwt4eal3a"]
+
+[ext_resource type="Script" path="res://stairsup_no_key.gd" id="1_6aeuj"]
+[ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="2_g5q05"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_11gpm"]
+size = Vector2(279, 188)
+
+[node name="stairsup_no_key" type="Area2D"]
+scale = Vector2(0.15, 0.15)
+script = ExtResource("1_6aeuj")
+
+[node name="Stairs" type="Sprite2D" parent="."]
+texture = ExtResource("2_g5q05")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_11gpm")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

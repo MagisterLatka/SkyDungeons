@@ -1,10 +1,14 @@
-[gd_scene load_steps=14 format=3 uid="uid://lpef13waem4q"]
+[gd_scene load_steps=18 format=3 uid="uid://lpef13waem4q"]
 
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_7lbwl"]
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="2_6f815"]
 [ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="3_2w5mh"]
-[ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="4_j3s75"]
 [ext_resource type="AudioStream" uid="uid://bogkpcr4ntt83" path="res://assets/music/dungeonMusic.wav" id="5_0ulss"]
+[ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="6_li0xt"]
+[ext_resource type="PackedScene" uid="uid://b14of11517fa2" path="res://lock_wall.tscn" id="6_qxt7p"]
+[ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="7_s54w4"]
+[ext_resource type="Script" path="res://Label.gd" id="8_etr2l"]
+[ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_kwtr0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtn7k"]
 size = Vector2(1600, 200)
@@ -27,8 +31,20 @@ size = Vector2(400, 200)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t630a"]
 size = Vector2(400, 200)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d5ouj"]
-size = Vector2(200, 200)
+[sub_resource type="GDScript" id="GDScript_r3v1g"]
+script/source = "extends Label
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	text = str(Game.get_keys())
+	
+"
 
 [node name="LevelFinal" type="Node2D"]
 
@@ -227,26 +243,44 @@ texture = ExtResource("3_2w5mh")
 region_enabled = true
 region_rect = Rect2(15, 20, 262, 154)
 
-[node name="LockedWall" type="Node" parent="."]
-
-[node name="Wall" type="Sprite2D" parent="LockedWall"]
-texture_repeat = 3
-position = Vector2(-200, 800)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("1_7lbwl")
-region_enabled = true
-region_rect = Rect2(0, 0, 1600, 800)
-
-[node name="Lock" type="Sprite2D" parent="LockedWall"]
-position = Vector2(-100, 800)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_j3s75")
-
-[node name="Area2D" type="Area2D" parent="LockedWall"]
-position = Vector2(-100, 800)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LockedWall/Area2D"]
-shape = SubResource("RectangleShape2D_d5ouj")
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_0ulss")
+
+[node name="Player1" parent="." instance=ExtResource("6_li0xt")]
+position = Vector2(2317, 962)
+
+[node name="LockWall" parent="." instance=ExtResource("6_qxt7p")]
+position = Vector2(-100, 802)
+scale = Vector2(2, 2)
+
+[node name="Key" parent="." instance=ExtResource("7_s54w4")]
+position = Vector2(221, 832)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Hp" type="Label" parent="UI"]
+offset_left = 22.0
+offset_top = 20.0
+offset_right = 62.0
+offset_bottom = 43.0
+theme_override_font_sizes/font_size = 32
+text = "HP"
+script = ExtResource("8_etr2l")
+metadata/_edit_use_anchors_ = true
+
+[node name="Keys" type="Label" parent="UI"]
+offset_left = 110.0
+offset_top = 565.0
+offset_right = 150.0
+offset_bottom = 588.0
+script = SubResource("GDScript_r3v1g")
+metadata/_edit_use_anchors_ = true
+
+[node name="Key" type="TextureRect" parent="UI"]
+offset_left = 43.0
+offset_top = 560.0
+offset_right = 98.5676
+offset_bottom = 600.0
+texture = ExtResource("9_kwtr0")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true

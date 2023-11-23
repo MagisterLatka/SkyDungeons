@@ -1,21 +1,17 @@
-[gd_scene load_steps=38 format=3 uid="uid://d2fmxmw0dqnhu"]
+[gd_scene load_steps=36 format=3 uid="uid://d2fmxmw0dqnhu"]
 
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="1_x7emj"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="2_cav4v"]
+[ext_resource type="PackedScene" uid="uid://b14of11517fa2" path="res://lock_wall.tscn" id="2_halg5"]
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="3_6dojc"]
 [ext_resource type="Texture2D" uid="uid://cangckw36ftqr" path="res://assets/levels/stairsdown.png" id="3_lp3ck"]
-[ext_resource type="Texture2D" uid="uid://dtucmpp8xrsxw" path="res://assets/levels/lock.png" id="4_pkx6c"]
-[ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="6_wounx"]
 [ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="7_bf71h"]
 [ext_resource type="Script" path="res://Label.gd" id="8_oevx6"]
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_q4lnw"]
 [ext_resource type="PackedScene" uid="uid://w0exod3bjubo" path="res://scenes/enemy.tscn" id="10_uewin"]
 [ext_resource type="PackedScene" uid="uid://be4gwefsbwpc7" path="res://shooting_enemy.tscn" id="11_0onr7"]
-[ext_resource type="PackedScene" uid="uid://cpwjhd0sgxc4x" path="res://boss_enemy.tscn" id="12_a2npp"]
+[ext_resource type="PackedScene" uid="uid://c3lwkwt4eal3a" path="res://stairsup_no_key.tscn" id="12_fmuhu"]
 [ext_resource type="AudioStream" uid="uid://bogkpcr4ntt83" path="res://assets/music/dungeonMusic.wav" id="13_qcjc8"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wu5d5"]
-size = Vector2(400, 400)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m34sm"]
 size = Vector2(1300, 100)
@@ -156,22 +152,9 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 600, 600)
 
-[node name="LockedWall" type="Node" parent="Rooms"]
+[node name="Corridors" type="Node" parent="."]
 
-[node name="Wall" type="Sprite2D" parent="Rooms/LockedWall"]
-texture_repeat = 3
-position = Vector2(-800, 800)
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("3_6dojc")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 400, 400)
-
-[node name="Lock" type="Sprite2D" parent="Rooms/LockedWall/Wall"]
-position = Vector2(200, 200)
-texture = ExtResource("4_pkx6c")
-
-[node name="Corridor" type="Sprite2D" parent="Rooms/LockedWall"]
+[node name="Corridor" type="Sprite2D" parent="Corridors"]
 light_mask = 2
 visibility_layer = 2
 z_index = -2
@@ -181,16 +164,6 @@ texture = ExtResource("1_x7emj")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 100, 100)
-
-[node name="Area2D" type="Area2D" parent="Rooms/LockedWall"]
-position = Vector2(-800, 800)
-scale = Vector2(0.25, 0.25)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/LockedWall/Area2D"]
-position = Vector2(200, 200)
-shape = SubResource("RectangleShape2D_wu5d5")
-
-[node name="Corridors" type="Node" parent="."]
 
 [node name="Corridor1" type="Sprite2D" parent="Corridors"]
 z_index = -2
@@ -530,14 +503,6 @@ texture = ExtResource("3_lp3ck")
 region_enabled = true
 region_rect = Rect2(15, 20, 262, 154)
 
-[node name="StairsUp" type="Sprite2D" parent="."]
-z_index = -1
-position = Vector2(-1047, 1757)
-scale = Vector2(0.2, 0.3)
-texture = ExtResource("6_wounx")
-region_enabled = true
-region_rect = Rect2(15, 20, 262, 154)
-
 [node name="Key" parent="." instance=ExtResource("7_bf71h")]
 position = Vector2(1744, 152)
 
@@ -580,9 +545,15 @@ position = Vector2(329, 403)
 [node name="ShootingEnemy" parent="." groups=["mobs"] instance=ExtResource("11_0onr7")]
 position = Vector2(807, 447)
 
-[node name="BossEnemy" parent="." groups=["mobs"] instance=ExtResource("12_a2npp")]
-position = Vector2(53, 431)
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_qcjc8")
 autoplay = true
+
+[node name="LockWall" parent="." instance=ExtResource("2_halg5")]
+position = Vector2(-750, 851)
+
+[node name="Key2" parent="." instance=ExtResource("7_bf71h")]
+position = Vector2(-268, 750)
+
+[node name="stairsup_no_key" parent="." instance=ExtResource("12_fmuhu")]
+position = Vector2(-1051, 1760)

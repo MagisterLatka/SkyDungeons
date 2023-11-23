@@ -569,8 +569,17 @@ metadata/_edit_use_anchors_ = true
 [node name="Enemy" parent="." groups=["mobs"] instance=ExtResource("10_uewin")]
 position = Vector2(329, 403)
 
+[node name="Enemy2" parent="." groups=["mobs"] instance=ExtResource("10_uewin")]
+position = Vector2(55, 881)
+
+[node name="Enemy3" parent="." groups=["mobs"] instance=ExtResource("10_uewin")]
+position = Vector2(-908, 1257)
+
 [node name="ShootingEnemy" parent="." groups=["mobs"] instance=ExtResource("11_0onr7")]
 position = Vector2(807, 447)
+
+[node name="ShootingEnemy2" parent="." groups=["mobs"] instance=ExtResource("11_0onr7")]
+position = Vector2(1276, 410)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_qcjc8")
@@ -579,9 +588,6 @@ autoplay = true
 
 [node name="LockWall" parent="." instance=ExtResource("2_halg5")]
 position = Vector2(-750, 851)
-
-[node name="Key2" parent="." instance=ExtResource("7_bf71h")]
-position = Vector2(-268, 750)
 
 [node name="stairsup_no_key" parent="." instance=ExtResource("12_fmuhu")]
 position = Vector2(-1051, 1760)
@@ -599,3 +605,4 @@ scale = Vector2(2.5, 1)
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
 position = Vector2(549, 325)
 texture = ExtResource("15_312tb")
+metadata/_edit_lock_ = true

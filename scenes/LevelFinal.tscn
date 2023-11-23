@@ -287,7 +287,7 @@ texture = ExtResource("9_kwtr0")
 expand_mode = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="BossEnemy" parent="." instance=ExtResource("10_41nu5")]
+[node name="BossEnemy" parent="." groups=["mobs"] instance=ExtResource("10_41nu5")]
 position = Vector2(304, 972)
 
 [node name="TriggerWin" parent="." instance=ExtResource("11_0ebjw")]

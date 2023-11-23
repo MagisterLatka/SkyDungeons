@@ -1,6 +1,7 @@
 extends Area2D
 
 var arrow = preload("res://arrow.tscn")
+var key = preload("res://key.tscn")
 var health = 8
 var startPoint: Vector2
 var currentlyInStage: int = 1 
@@ -23,6 +24,10 @@ func _ready():
 
 func _process(delta):
 	if health <= 0:
+		var last_key = key.instantiate()
+		get_parent().add_child(last_key)
+		
+		last_key.position = global_position
 		queue_free()
 
 #	

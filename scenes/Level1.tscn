@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://d2fmxmw0dqnhu"]
+[gd_scene load_steps=39 format=3 uid="uid://d2fmxmw0dqnhu"]
 
 [ext_resource type="Texture2D" uid="uid://c6a7iqjy2u8kb" path="res://assets/levels/pixil-frame-0(6).png" id="1_8gao3"]
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="1_x7emj"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://be4gwefsbwpc7" path="res://shooting_enemy.tscn" id="11_0onr7"]
 [ext_resource type="PackedScene" uid="uid://c3lwkwt4eal3a" path="res://stairsup_no_key.tscn" id="12_fmuhu"]
 [ext_resource type="AudioStream" uid="uid://bogkpcr4ntt83" path="res://assets/music/dungeonMusic.wav" id="13_qcjc8"]
+[ext_resource type="Texture2D" uid="uid://cout6y78ln1fb" path="res://assets/levels/pexels-pixabay-414659.jpg" id="15_312tb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m34sm"]
 size = Vector2(1300, 100)
@@ -582,3 +583,17 @@ position = Vector2(-268, 750)
 
 [node name="stairsup_no_key" parent="." instance=ExtResource("12_fmuhu")]
 position = Vector2(-1051, 1760)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = -1
+texture_filter = 2
+texture_repeat = 3
+position = Vector2(500, 500)
+rotation = -1.5708
+scale = Vector2(2.5, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(549, 325)
+texture = ExtResource("15_312tb")

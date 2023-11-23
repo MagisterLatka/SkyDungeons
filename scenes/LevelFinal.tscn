@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://lpef13waem4q"]
+[gd_scene load_steps=20 format=3 uid="uid://lpef13waem4q"]
 
 [ext_resource type="Texture2D" uid="uid://cisb10xcd3fuj" path="res://assets/levels/tile3.png" id="1_447do"]
 [ext_resource type="Texture2D" uid="uid://c6a7iqjy2u8kb" path="res://assets/levels/pixil-frame-0(6).png" id="2_uip2b"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_kwtr0"]
 [ext_resource type="PackedScene" uid="uid://cpwjhd0sgxc4x" path="res://boss_enemy.tscn" id="10_41nu5"]
 [ext_resource type="PackedScene" uid="uid://svkkp05rxr2l" path="res://trigger_win.tscn" id="11_0ebjw"]
+[ext_resource type="Texture2D" uid="uid://cout6y78ln1fb" path="res://assets/levels/pexels-pixabay-414659.jpg" id="11_hh6n7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtn7k"]
 size = Vector2(1600, 200)
@@ -293,3 +294,17 @@ position = Vector2(304, 972)
 
 [node name="TriggerWin" parent="." instance=ExtResource("11_0ebjw")]
 position = Vector2(-781, 692)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
+z_index = -1
+texture_filter = 2
+texture_repeat = 3
+position = Vector2(500, 500)
+rotation = -1.5708
+scale = Vector2(2.5, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(549, 325)
+texture = ExtResource("11_hh6n7")

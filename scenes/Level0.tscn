@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bcmn6ke7m1h32" path="res://assets/levels/floor.png" id="1_h2mpl"]
 [ext_resource type="Script" path="res://Label.gd" id="1_kdqu4"]
 [ext_resource type="Texture2D" uid="uid://cisb10xcd3fuj" path="res://assets/levels/tile3.png" id="2_t2w4f"]
-[ext_resource type="Texture2D" uid="uid://brks7ftxux7ob" path="res://assets/levels/67dc45f6c2e74657d2e259b383d5a0b4.jpg" id="3_7o15u"]
+[ext_resource type="Texture2D" uid="uid://cout6y78ln1fb" path="res://assets/levels/pexels-pixabay-414659.jpg" id="4_2wr1m"]
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_0spnx"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="9_cmbel"]
 [ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="9_txsj8"]
@@ -429,16 +429,19 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("2_t2w4f")
 centered = false
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Background" type="ParallaxLayer" parent="ParallaxBackground"]
 z_index = -1
 texture_filter = 2
 texture_repeat = 3
 position = Vector2(500, 500)
 rotation = -1.5708
 scale = Vector2(2.5, 1)
-texture = ExtResource("3_7o15u")
-region_enabled = true
-region_rect = Rect2(0, 0, 564, 2202)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground"]
+position = Vector2(549, 325)
+texture = ExtResource("4_2wr1m")
 
 [node name="Player1" parent="." instance=ExtResource("9_cmbel")]
 z_index = 1

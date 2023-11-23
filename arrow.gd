@@ -30,3 +30,5 @@ func _on_body_entered(body):
 	if body == Player:
 		Player.take_damage(1)
 		queue_free()
+	elif body.name == "Walls":
+		queue_free()

@@ -1,5 +1,6 @@
-[gd_scene load_steps=36 format=3 uid="uid://d2fmxmw0dqnhu"]
+[gd_scene load_steps=37 format=3 uid="uid://d2fmxmw0dqnhu"]
 
+[ext_resource type="Texture2D" uid="uid://c6a7iqjy2u8kb" path="res://assets/levels/pixil-frame-0(6).png" id="1_8gao3"]
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="1_x7emj"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="2_cav4v"]
 [ext_resource type="PackedScene" uid="uid://b14of11517fa2" path="res://lock_wall.tscn" id="2_halg5"]
@@ -103,7 +104,7 @@ light_mask = 2
 visibility_layer = 2
 z_index = -2
 texture_repeat = 3
-texture = ExtResource("1_x7emj")
+texture = ExtResource("1_8gao3")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 500, 500)
@@ -114,7 +115,7 @@ visibility_layer = 2
 z_index = -2
 texture_repeat = 3
 position = Vector2(-700, 200)
-texture = ExtResource("1_x7emj")
+texture = ExtResource("1_8gao3")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 300, 300)
@@ -125,7 +126,7 @@ visibility_layer = 2
 z_index = -2
 texture_repeat = 3
 position = Vector2(-1300, 900)
-texture = ExtResource("1_x7emj")
+texture = ExtResource("1_8gao3")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 600, 400)
@@ -136,7 +137,7 @@ visibility_layer = 2
 z_index = -2
 texture_repeat = 3
 position = Vector2(-1100, 1500)
-texture = ExtResource("1_x7emj")
+texture = ExtResource("1_8gao3")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 300, 300)
@@ -147,7 +148,7 @@ visibility_layer = 2
 z_index = -2
 texture_repeat = 3
 position = Vector2(1200, 100)
-texture = ExtResource("1_x7emj")
+texture = ExtResource("1_8gao3")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 600, 600)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://m58ofjv8cmch"]
+[gd_scene load_steps=27 format=3 uid="uid://m58ofjv8cmch"]
 
+[ext_resource type="Texture2D" uid="uid://cusskhix31bro" path="res://assets/levels/pixil-frame-0(5).png" id="1_3nk30"]
 [ext_resource type="Texture2D" uid="uid://urommn0e8or" path="res://assets/levels/avfe8431941181a9afdae.png" id="1_6tlw5"]
 [ext_resource type="Script" path="res://Label.gd" id="1_kdqu4"]
-[ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="2_r7v4i"]
+[ext_resource type="Texture2D" uid="uid://cisb10xcd3fuj" path="res://assets/levels/tile3.png" id="2_t2w4f"]
 [ext_resource type="Texture2D" uid="uid://brks7ftxux7ob" path="res://assets/levels/67dc45f6c2e74657d2e259b383d5a0b4.jpg" id="3_7o15u"]
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_0spnx"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="9_cmbel"]
@@ -73,7 +74,7 @@ metadata/_edit_vertical_guides_ = []
 texture_filter = 1
 texture_repeat = 2
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_6tlw5")
+texture = ExtResource("1_3nk30")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 8192, 8192)
@@ -178,7 +179,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-141.1, -50)
 scale = Vector2(0.0497788, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 4640, 2000)
@@ -192,7 +193,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-89.9, -50)
 scale = Vector2(0.0497788, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 3612, 2000)
@@ -206,7 +207,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-51.2, -51.2)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2048, 2048)
@@ -220,7 +221,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-51.2, -102.4)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2048, 4096)
@@ -236,7 +237,7 @@ texture_repeat = 2
 position = Vector2(-89.8998, 50.0003)
 rotation = -1.5708
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2000, 4616)
@@ -252,7 +253,7 @@ texture_repeat = 2
 position = Vector2(-140.9, 50.0005)
 rotation = -1.5708
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2000, 4616)
@@ -268,7 +269,7 @@ texture_repeat = 2
 position = Vector2(-151.4, 50.0005)
 rotation = -1.5708
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 2000, 9172)
@@ -284,7 +285,7 @@ texture_repeat = 2
 position = Vector2(-179.199, 202.701)
 rotation = -1.5708
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 7168)
@@ -295,7 +296,7 @@ texture_repeat = 2
 position = Vector2(128.001, 151.5)
 rotation = -1.5708
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 7046, 1024)
@@ -311,7 +312,7 @@ texture_repeat = 2
 position = Vector2(-78.1995, 125.2)
 rotation = -1.5708
 scale = Vector2(0.0497788, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 5022, 3072)
@@ -327,7 +328,7 @@ texture_repeat = 2
 position = Vector2(-4.89923, 205.8)
 rotation = -1.5708
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 6144, 1024)
@@ -341,7 +342,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-204.8, -25.6)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 8192, 1024)
@@ -355,7 +356,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-25.6, -204.8)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 8192)
@@ -367,7 +368,7 @@ shape = SubResource("RectangleShape2D_eq3qw")
 [node name="Brickwall" type="Sprite2D" parent="Walls/Wall12"]
 position = Vector2(-25, -25.6)
 scale = Vector2(0.049, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 1024)
@@ -381,7 +382,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-25.6, -153.6)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 flip_h = true
 flip_v = true
@@ -397,7 +398,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-25.6, -204.7)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 1024, 8192)
@@ -411,7 +412,7 @@ texture_filter = 1
 texture_repeat = 2
 position = Vector2(-102.4, -25.6)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 8192, 1024)
@@ -419,19 +420,19 @@ region_rect = Rect2(0, 0, 8192, 1024)
 [node name="Brickwall" type="Sprite2D" parent="Walls"]
 position = Vector2(-51.2, -51.2)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 
 [node name="Brickwall1" type="Sprite2D" parent="Walls"]
 position = Vector2(-51.2, 919.2)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 
 [node name="Brickwall2" type="Sprite2D" parent="Walls"]
 position = Vector2(559.6, -51.2)
 scale = Vector2(0.05, 0.05)
-texture = ExtResource("2_r7v4i")
+texture = ExtResource("2_t2w4f")
 centered = false
 
 [node name="Background" type="Sprite2D" parent="."]

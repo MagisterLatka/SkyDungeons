@@ -12,6 +12,7 @@ var lastDirection = 1 #1 - w prawo, 2 - w dol, 3 - w lewo, 4 - w gore
 var screen_size
 var isAttack = false
 var isDead = false
+var isDeathTimer = false
 
 var isInvulnerable = false
 var timeInvis = 0
@@ -127,6 +128,10 @@ func death_player():
 	
 	if Sprite.frame == 8:
 		Sprite.frame = 8
+		if !isDeathTimer:
+			get_node("DeathTimer").start()
+			isDeathTimer = true
+		print("tu1")
 	else:
 		Sprite.play("death")
 
@@ -134,27 +139,31 @@ func death_player():
 func _on_sword_hit_area_entered(area):
 
 	if area.is_in_group("mobs"):
-		print("tu")
+		
 		area.take_damage(1)
 	
 	
 func _on_sword_hit_down_area_entered(area):
 	if area.is_in_group("mobs"):
-		print("tu")
+
 		area.take_damage(1)
 
 
 func _on_sword_hit_up_area_entered(area):
 	if area.is_in_group("mobs"):
-		print("tu")
+
 		area.take_damage(1)
 
 
 func _on_sword_hit_left_area_entered(area):
 	if area.is_in_group("mobs"):
-		print("tu")
+
 		area.take_damage(1)
 
 
 func _on_vulnerability_timer_timeout():
 	isInvulnerable = false
+
+
+func _on_death_timer_timeout():
+	Game.game_over()

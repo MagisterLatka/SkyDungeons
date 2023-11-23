@@ -803,9 +803,12 @@ stream = ExtResource("12_jgff7")
 [node name="GameOverSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_a2b7d")
 
+[node name="DeathTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="EnemiesDetection" to="." method="_on_enemies_detection_body_entered"]
 [connection signal="area_entered" from="SwordHit_Right" to="." method="_on_sword_hit_area_entered"]
 [connection signal="area_entered" from="SwordHit_Down" to="." method="_on_sword_hit_down_area_entered"]
 [connection signal="area_entered" from="SwordHit_Up" to="." method="_on_sword_hit_up_area_entered"]
 [connection signal="area_entered" from="SwordHit_Left" to="." method="_on_sword_hit_left_area_entered"]
 [connection signal="timeout" from="VulnerabilityTimer" to="." method="_on_vulnerability_timer_timeout"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_death_timer_timeout"]

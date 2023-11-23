@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://lpef13waem4q"]
+[gd_scene load_steps=19 format=3 uid="uid://lpef13waem4q"]
 
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_7lbwl"]
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="2_6f815"]
@@ -6,7 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://bogkpcr4ntt83" path="res://assets/music/dungeonMusic.wav" id="5_0ulss"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="6_li0xt"]
 [ext_resource type="PackedScene" uid="uid://b14of11517fa2" path="res://lock_wall.tscn" id="6_qxt7p"]
-[ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="7_s54w4"]
 [ext_resource type="Script" path="res://Label.gd" id="8_etr2l"]
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_kwtr0"]
 [ext_resource type="PackedScene" uid="uid://cpwjhd0sgxc4x" path="res://boss_enemy.tscn" id="10_41nu5"]
@@ -247,6 +246,7 @@ region_rect = Rect2(15, 20, 262, 154)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_0ulss")
+autoplay = true
 
 [node name="Player1" parent="." instance=ExtResource("6_li0xt")]
 position = Vector2(2317, 962)
@@ -254,9 +254,6 @@ position = Vector2(2317, 962)
 [node name="LockWall" parent="." instance=ExtResource("6_qxt7p")]
 position = Vector2(-100, 802)
 scale = Vector2(2, 2)
-
-[node name="Key" parent="." instance=ExtResource("7_s54w4")]
-position = Vector2(221, 832)
 
 [node name="UI" type="CanvasLayer" parent="."]
 

@@ -746,7 +746,7 @@ script = ExtResource("1_igmfy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_2yuxm")
-animation = &"attack_up"
+animation = &"idle_up"
 autoplay = "default"
 frame = 1
 flip_h = true

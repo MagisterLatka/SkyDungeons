@@ -55,6 +55,7 @@ scale = Vector2(0.999998, 0.999998)
 shape = SubResource("RectangleShape2D_pl23m")
 
 [node name="ShootingCD" type="Timer" parent="."]
+wait_time = 1.75
 autostart = true
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

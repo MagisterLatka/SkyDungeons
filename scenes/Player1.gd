@@ -14,6 +14,8 @@ var isAttack = false
 var isDead = false
 
 var isInvulnerable = false
+var timeInvis = 0
+var isRed = false
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -78,6 +80,17 @@ func _physics_process(delta):
 		
 	move_and_slide()
 	
+func _process(delta):
+	timeInvis += delta
+	if isInvulnerable and (timeInvis >= 0.125) and not isRed:
+		$AnimatedSprite2D.modulate = Color(1, 0, 0)
+		isRed = true
+		timeInvis = 0
+	elif isInvulnerable and (timeInvis >= 0.125) and isRed:
+		$AnimatedSprite2D.modulate = Color(1, 1, 1)
+		isRed = false
+		timeInvis = 0
+	
 func take_damage(damage):
 	if not isInvulnerable:
 		Game.health = Game.health - damage
@@ -87,6 +100,9 @@ func take_damage(damage):
 			$GameOverSound.play()
 			isDead = true
 			return 0
+		$AnimatedSprite2D.modulate = Color(1, 0, 0)
+		isRed = true
+		timeInvis = 0
 		$VulnerabilityTimer.start()
 		isInvulnerable = true
 

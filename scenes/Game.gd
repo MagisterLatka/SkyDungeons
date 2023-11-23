@@ -18,7 +18,9 @@ func reduce_key():
 	numOfKeys -= 1
 	
 func game_over():
-	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
+	
+	
 
 func win_game():
 	get_tree().change_scene_to_file("res://scenes/outro.tscn")

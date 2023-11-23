@@ -267,6 +267,7 @@ offset_left = 22.0
 offset_top = 20.0
 offset_right = 62.0
 offset_bottom = 43.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
 text = "HP"
 script = ExtResource("8_etr2l")
@@ -277,6 +278,7 @@ offset_left = 110.0
 offset_top = 565.0
 offset_right = 150.0
 offset_bottom = 588.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
 script = SubResource("GDScript_r3v1g")
 metadata/_edit_use_anchors_ = true
 

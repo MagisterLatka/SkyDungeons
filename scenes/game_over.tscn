@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2smuuyfdl23a"]
 
-[ext_resource type="Script" path="res://scenes/OutroLabel.gd" id="1_fptng"]
+[ext_resource type="Script" path="res://scenes/game_over.gd" id="1_2g344"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6et26"]
 font_size = 60
@@ -12,6 +12,7 @@ shadow_color = Color(1, 0.282353, 0, 0.568627)
 shadow_offset = Vector2(3, 3)
 
 [node name="GameOver" type="Node2D"]
+script = ExtResource("1_2g344")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
@@ -28,4 +29,8 @@ label_settings = SubResource("LabelSettings_6et26")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
-script = ExtResource("1_fptng")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

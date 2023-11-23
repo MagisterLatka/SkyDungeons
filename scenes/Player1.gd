@@ -131,7 +131,6 @@ func death_player():
 		if !isDeathTimer:
 			get_node("DeathTimer").start()
 			isDeathTimer = true
-		print("tu1")
 	else:
 		Sprite.play("death")
 

@@ -571,6 +571,7 @@ position = Vector2(807, 447)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_qcjc8")
+volume_db = -0.25
 autoplay = true
 
 [node name="LockWall" parent="." instance=ExtResource("2_halg5")]

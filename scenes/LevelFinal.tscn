@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_7lbwl"]
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="2_6f815"]
 [ext_resource type="Texture2D" uid="uid://b3agm3tfhawr4" path="res://assets/levels/stairsup.png" id="3_2w5mh"]
-[ext_resource type="AudioStream" uid="uid://bogkpcr4ntt83" path="res://assets/music/dungeonMusic.wav" id="5_0ulss"]
+[ext_resource type="AudioStream" uid="uid://bcovgxjkl0cxv" path="res://assets/music/bossMusic.wav" id="4_dnj6r"]
 [ext_resource type="PackedScene" uid="uid://0afouwxdk6c" path="res://scenes/Player1.tscn" id="6_li0xt"]
 [ext_resource type="PackedScene" uid="uid://b14of11517fa2" path="res://lock_wall.tscn" id="6_qxt7p"]
 [ext_resource type="Script" path="res://Label.gd" id="8_etr2l"]
@@ -245,7 +245,8 @@ region_enabled = true
 region_rect = Rect2(15, 20, 262, 154)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_0ulss")
+stream = ExtResource("4_dnj6r")
+volume_db = -0.25
 autoplay = true
 
 [node name="Player1" parent="." instance=ExtResource("6_li0xt")]

@@ -63,6 +63,7 @@ func _physics_process(delta):
 						projectile.set_offset(i)
 						get_parent().add_child(projectile)
 						projectile.transform = global_transform
+						projectile.scale = Vector2(0.1, 0.1)
 					$PauseInMovement.start(1)
 					waiting = true
 			3:
@@ -83,6 +84,7 @@ func _physics_process(delta):
 						projectile.set_offset(i)
 						get_parent().add_child(projectile)
 						projectile.transform = global_transform
+						projectile.scale = Vector2(0.1, 0.1)
 					$PauseInMovement.start(2)
 					waiting = true
  

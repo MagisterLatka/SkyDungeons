@@ -20,6 +20,7 @@ func _physics_process(delta):
 		dir = (Player.global_position - Vector2(global_position))
 		dir_norm = dir.normalized().rotated(deg_to_rad(offset))	
 		rotation = position.angle_to_point(Player.position) + deg_to_rad(offset)
+		$Sound.play()
 		set_settings = true
 	position += dir_norm * delta * bulletSpeed 
 

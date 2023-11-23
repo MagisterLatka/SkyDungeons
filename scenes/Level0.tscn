@@ -498,6 +498,7 @@ position = Vector2(344, 549)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_fd2c0")
+volume_db = -0.25
 autoplay = true
 
 [connection signal="timeout" from="Stairsup2/Timer1" to="Stairsup2" method="_on_timer_timeout"]

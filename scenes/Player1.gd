@@ -13,6 +13,8 @@ var screen_size
 var isAttack = false
 var isDead = false
 
+var isInvulnerable = false
+
 func _ready():
 	screen_size = get_viewport_rect().size
 	$SwordHit_Right/CollisionShape2D.disabled = true
@@ -77,10 +79,16 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func take_damage(damage):
-	Game.health = Game.health - damage
-	if Game.health <= 0:
-		Game.health = 0
-		isDead = true
+	if not isInvulnerable:
+		Game.health = Game.health - damage
+		$HitSound.play()
+		if Game.health <= 0:
+			Game.health = 0
+			$GameOverSound.play()
+			isDead = true
+			return 0
+		$VulnerabilityTimer.start()
+		isInvulnerable = true
 
 		
 func Attack():
@@ -130,3 +138,7 @@ func _on_sword_hit_left_area_entered(area):
 	if area.is_in_group("mobs"):
 		print("tu")
 		area.take_damage(1)
+
+
+func _on_vulnerability_timer_timeout():
+	isInvulnerable = false

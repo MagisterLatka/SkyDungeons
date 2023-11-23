@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=3 uid="uid://0afouwxdk6c"]
+[gd_scene load_steps=87 format=3 uid="uid://0afouwxdk6c"]
 
 [ext_resource type="Script" path="res://scenes/Player1.gd" id="1_igmfy"]
 [ext_resource type="Texture2D" uid="uid://hqs1hdgfwhju" path="res://assets/player/attack_right_40x40.png" id="2_6r64x"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://c4u1k5j1icg6u" path="res://assets/player/idle_down_40x40.png" id="6_08ckp"]
 [ext_resource type="Texture2D" uid="uid://h1oj5ixn01rj" path="res://assets/player/run_up_40x40.png" id="6_k2bnx"]
 [ext_resource type="Texture2D" uid="uid://ccsng42gv3453" path="res://assets/player/idle_up_40x40.png" id="7_pseve"]
+[ext_resource type="AudioStream" uid="uid://dby1q7u4b6ud6" path="res://assets/sounds/hitHurt.wav" id="12_jgff7"]
+[ext_resource type="AudioStream" uid="uid://cb2g1f2tx156b" path="res://assets/sounds/game_over.wav" id="13_a2b7d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w6p21"]
 atlas = ExtResource("3_kap3d")
@@ -739,7 +741,7 @@ size = Vector2(15, 27)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2onb"]
 size = Vector2(15, 18)
 
-[node name="Player1" type="CharacterBody2D"]
+[node name="Player1" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_igmfy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -792,8 +794,18 @@ shape = SubResource("RectangleShape2D_pvifq")
 position = Vector2(-16.5, 3)
 shape = SubResource("RectangleShape2D_w2onb")
 
+[node name="VulnerabilityTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="HitSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_jgff7")
+
+[node name="GameOverSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_a2b7d")
+
 [connection signal="body_entered" from="EnemiesDetection" to="." method="_on_enemies_detection_body_entered"]
 [connection signal="area_entered" from="SwordHit_Right" to="." method="_on_sword_hit_area_entered"]
 [connection signal="area_entered" from="SwordHit_Down" to="." method="_on_sword_hit_down_area_entered"]
 [connection signal="area_entered" from="SwordHit_Up" to="." method="_on_sword_hit_up_area_entered"]
 [connection signal="area_entered" from="SwordHit_Left" to="." method="_on_sword_hit_left_area_entered"]
+[connection signal="timeout" from="VulnerabilityTimer" to="." method="_on_vulnerability_timer_timeout"]

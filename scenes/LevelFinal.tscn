@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://lpef13waem4q"]
+[gd_scene load_steps=20 format=3 uid="uid://lpef13waem4q"]
 
 [ext_resource type="Texture2D" uid="uid://b6ujwb6qo1pr0" path="res://assets/levels/brickwall.png" id="1_7lbwl"]
 [ext_resource type="Texture2D" uid="uid://4w6f2t1gajsf" path="res://assets/levels/555027539fa6a1e2f1e3ef6ad4bce7f4.jpg" id="2_6f815"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://kp08xhvrfh8" path="res://key.tscn" id="7_s54w4"]
 [ext_resource type="Script" path="res://Label.gd" id="8_etr2l"]
 [ext_resource type="Texture2D" uid="uid://c8ptwlnxx07tu" path="res://assets/levels/key.png" id="9_kwtr0"]
+[ext_resource type="PackedScene" uid="uid://cpwjhd0sgxc4x" path="res://boss_enemy.tscn" id="10_41nu5"]
+[ext_resource type="PackedScene" uid="uid://svkkp05rxr2l" path="res://trigger_win.tscn" id="11_0ebjw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xtn7k"]
 size = Vector2(1600, 200)
@@ -284,3 +286,9 @@ offset_bottom = 600.0
 texture = ExtResource("9_kwtr0")
 expand_mode = 3
 metadata/_edit_use_anchors_ = true
+
+[node name="BossEnemy" parent="." instance=ExtResource("10_41nu5")]
+position = Vector2(304, 972)
+
+[node name="TriggerWin" parent="." instance=ExtResource("11_0ebjw")]
+position = Vector2(-781, 692)

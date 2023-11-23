@@ -17,11 +17,17 @@ func add_key():
 func reduce_key():
 	numOfKeys -= 1
 	
-#func game_over():
-		
+func game_over():
+	get_tree().change_scene_to_file("res://scenes/menu.tscn")
+
+func win_game():
+	get_tree().change_scene_to_file("res://scenes/outro.tscn")
 
 func new_game():
-	get_tree().change_scene_to_file("res://scenes/Level0.tscn")
+	get_tree().change_scene_to_file("res://scenes/intro.tscn")
+	health = MAXHEALTH
+	numOfKeys = 0
+	level = 0
 
 func change_level():
 	if level == 0:

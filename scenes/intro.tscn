@@ -1,9 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://odhcuiu2t77n"]
+[gd_scene load_steps=4 format=3 uid="uid://4pdwyj6fo52o"]
 
 [ext_resource type="Script" path="res://scenes/IntroLabel.gd" id="1_5qvs6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_8nfy6"]
 font_size = 32
+
+[sub_resource type="GDScript" id="GDScript_2i8u1"]
+script/source = "extends Button
+
+func _on_pressed():
+	get_tree().change_scene_to_file(\"res://scenes/Level0.tscn\")
+"
 
 [node name="Intro" type="Node2D"]
 
@@ -37,3 +44,6 @@ offset_top = 548.0
 offset_right = 1153.0
 offset_bottom = 648.0
 text = "Press to continue..."
+script = SubResource("GDScript_2i8u1")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

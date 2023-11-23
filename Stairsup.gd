@@ -13,11 +13,6 @@ func _on_body_entered(body):
 		tween1.tween_property(get_node("Lock"), "position", get_node("Lock").position - Vector2(0,100), 1)
 		tween1.tween_callback(get_node("Lock").queue_free)
 		get_node("Timer1").start()
-		
-		#body.transport_player()
-		
-	else:
-		print("zablokowane")
 
 
 func _on_timer_timeout():

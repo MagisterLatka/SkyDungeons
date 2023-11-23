@@ -12,8 +12,4 @@ func _on_area_2d_body_entered(body):
 		tween1.tween_callback(get_node("CollisionShape2D2/Area2D/Lock").queue_free)
 		tween2.tween_callback(self.queue_free)
 		
-		
-		#body.transport_player()
-		
-	else:
-		print("zablokowane")
+

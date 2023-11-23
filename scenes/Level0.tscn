@@ -479,7 +479,7 @@ expand_mode = 3
 metadata/_edit_use_anchors_ = true
 
 [node name="Key" parent="." instance=ExtResource("9_txsj8")]
-position = Vector2(368, 367)
+position = Vector2(150, 874)
 
 [node name="Stairsup2" parent="." instance=ExtResource("11_unorh")]
 position = Vector2(933, 539)
@@ -488,10 +488,16 @@ position = Vector2(933, 539)
 wait_time = 2.0
 
 [node name="Enemy" parent="." groups=["mobs"] instance=ExtResource("11_72cwa")]
-position = Vector2(68, 291)
+position = Vector2(56, 334)
+
+[node name="Enemy2" parent="." groups=["mobs"] instance=ExtResource("11_72cwa")]
+position = Vector2(924, 391)
 
 [node name="ShootingEnemy" parent="." groups=["mobs"] instance=ExtResource("10_lfnvt")]
 position = Vector2(344, 549)
+
+[node name="ShootingEnemy2" parent="." groups=["mobs"] instance=ExtResource("10_lfnvt")]
+position = Vector2(32, 841)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("12_fd2c0")

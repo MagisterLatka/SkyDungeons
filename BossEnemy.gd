@@ -2,7 +2,7 @@ extends Area2D
 
 var arrow = preload("res://arrow.tscn")
 var key = preload("res://key.tscn")
-var health = 8
+var health = 10
 var startPoint: Vector2
 var currentlyInStage: int = 1 
 var currentlyMoving = false

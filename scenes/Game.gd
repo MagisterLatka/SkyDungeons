@@ -1,7 +1,7 @@
 extends Node
 
 var numOfKeys = 0
-const MAXHEALTH = 100
+const MAXHEALTH = 10
 var health = MAXHEALTH
 var level = 0
 	

@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Game="*res://scenes/Game.gd"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
